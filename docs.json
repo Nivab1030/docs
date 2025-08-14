@@ -1,11 +1,11 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "name": "Lovable Documentation",
+  "name": "Kadabra Documentation",
   "theme": "mint",
   "logo": {
     "dark": "/assets/logo/logowhite.svg",
     "light": "/assets/logo/logoblack.svg",
-    "href": "https://lovable.dev/"
+    "href": "https://kadabra.dev/"
   },
   "favicon": "/assets/logo/favicon.svg",
   "colors": {
@@ -19,17 +19,17 @@
         {
           "anchor": "Announcements",
           "icon": "newspaper",
-          "href": "https://lovable.dev/blog?category=announcements"
+          "href": "https://kadabra.dev/blog?category=announcements"
         },
         {
           "anchor": "Status",
           "icon": "signal",
-          "href": "https://status.lovable.dev/"
+          "href": "https://status.kadabra.dev/"
         },
         {
           "anchor": "Feature requests",
           "icon": "rocket",
-          "href": "https://feedback.lovable.dev/"
+          "href": "https://feedback.kadabra.dev/"
         }
       ]
     },
@@ -61,7 +61,7 @@
               "features/seo",
               "features/security",
               "features/labs",
-              "features/figma-to-lovable"
+              "features/figma-to-kadabra"
             ]
           },
           {
@@ -139,10 +139,10 @@
     "socials": {
       "x": "https://x.com/lovable_dev",
       "github": "https://github.com/lovablelabs",
-      "linkedin": "https://linkedin.com/company/lovable-dev",
-      "youtube": "https://www.youtube.com/@lovable-labs/",
-      "discord": "https://discord.gg/lovable-dev",
-      "reddit": "https://www.reddit.com/r/lovable/"
+      "linkedin": "https://linkedin.com/company/kadabra-dev",
+      "youtube": "https://www.youtube.com/@kadabra-labs/",
+      "discord": "https://discord.gg/kadabra-dev",
+      "reddit": "https://www.reddit.com/r/kadabra/"
     }
   },
   "seo": {

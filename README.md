@@ -14,4 +14,4 @@ mintlify dev
 
 ## Legacy Netlify
 
-docs.gptengineer.app redirects to docs.lovable.dev - toml file with this configuration for the old netlify site is in the branch `netlify-legacy-for-redirect`
+docs.gptengineer.app redirects to docs.kadabra.dev - toml file with this configuration for the old netlify site is in the branch `netlify-legacy-for-redirect`

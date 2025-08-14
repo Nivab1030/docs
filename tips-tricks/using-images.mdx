@@ -1,6 +1,6 @@
 ---
-title: "Using images in Lovable"
-description: "Learn how to add images to your Lovable projects"
+title: "Using images in Kadabra"
+description: "Learn how to add images to your Kadabra projects"
 icon: "frame"
 ---
 
@@ -8,12 +8,12 @@ To add images you can do one of four things:
 
 <AccordionGroup>
   <Accordion title="Upload the image to the prompt chat">
-    Simply upload them in the chat and explain to Lovable’s AI where and how you’d like them to appear in your project.
+    Simply upload them in the chat and explain to Kadabra’s AI where and how you’d like them to appear in your project.
 
     <iframe width="100%" height="315" src="https://www.youtube.com/embed/fABvCZP4QlM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
   </Accordion>
   <Accordion title="Replace it on the visual editor">
-    You can replace an existing image directly using the [visual editor](https://docs.lovable.dev/features/precision-edit#visual-edits) functionality: 
+    You can replace an existing image directly using the [visual editor](https://docs.kadabra.dev/features/precision-edit#visual-edits) functionality: 
 
     <Steps>
       <Step title="Step 1">
@@ -34,7 +34,7 @@ To add images you can do one of four things:
   <Accordion title="Using an external image URL">
     One way to add images to your project is by referencing an image from an external URL. This method allows you to use images hosted on external platforms like Unsplash, Imgur, or any other image-hosting service. Be mindful of use copyrights\!
 
-    Here’s how to prompt Lovable to use an external image:
+    Here’s how to prompt Kadabra to use an external image:
 
     <Steps>
       <Step title="Step 1">
@@ -43,7 +43,7 @@ To add images you can do one of four things:
         For example, you can visit a site like Unsplash, select an image, and copy its URL.
       </Step>
       <Step title="Step 2">
-        In your project prompt, simply tell Lovable to use that image by specifying the URL. For example:
+        In your project prompt, simply tell Kadabra to use that image by specifying the URL. For example:
 
         ```
         Use the image from this URL 
@@ -54,11 +54,11 @@ To add images you can do one of four things:
     </Steps>
   </Accordion>
   <Accordion title="Using images from your GitHub public directory">
-    Another method to add images to your Lovable project is by using images uploaded to the `public` directory of your connected GitHub repository. Here’s how you can do it:
+    Another method to add images to your Kadabra project is by using images uploaded to the `public` directory of your connected GitHub repository. Here’s how you can do it:
 
     <Steps>
       <Step title="Connect your GitHub repository">
-        Ensure your project is connected to your GitHub repo. [Here's how to connect your repo](https://docs.lovable.dev/integrations/git-integration).
+        Ensure your project is connected to your GitHub repo. [Here's how to connect your repo](https://docs.kadabra.dev/integrations/git-integration).
       </Step>
       <Step title="Locate the public folder">
         Inside your GitHub repository, navigate to the `public` directory. This folder is typically used for hosting assets like images that can be referenced in your project.
@@ -78,10 +78,10 @@ To add images you can do one of four things:
         After selecting your image, write a simple commit message (e.g., "Adding image files to be used in the app") and click **"Commit changes"** to save the file to your repo.
       </Step>
       <Step title="Get the image path">
-        Once the file is uploaded, select it and then click on the copy icon next to the file name to copy the image’s path. This path will be used in your Lovable prompt.
+        Once the file is uploaded, select it and then click on the copy icon next to the file name to copy the image’s path. This path will be used in your Kadabra prompt.
         ![Selecting files for upload](/assets/using-images-github-selecting.png)
       </Step>
-      <Step title="Use the image in Lovable">
+      <Step title="Use the image in Kadabra">
         You can now reference this image in your project by using a prompt like the following:
 
         ```
@@ -92,13 +92,13 @@ To add images you can do one of four things:
         Be sure to use your image name and path you copied in the previous step.
 
         <Warning>
-          Uploading large images to your GitHub repo can cause it to grow in size, which can affect Lovable performance (longer repo cloning times, slower startup of previews/sandbox).
+          Uploading large images to your GitHub repo can cause it to grow in size, which can affect Kadabra performance (longer repo cloning times, slower startup of previews/sandbox).
 
           Try to optimize your images before uploading them to your `public` folder by compressing them and using dimensions that are relevant to your use case. For example, don't use a full HD-sized image if it will only be displayed as a small icon.
         </Warning>
       </Step>
     </Steps>
-    To help you better understand how to integrate images using the methods outlined above, we have a project you can explore: [Lovable Project Example](https://lovable.dev/projects/e823fedf-238d-4313-86a8-1fd4bfc2a9ba). In this project, you can see the actual prompts and how each method works in practice.
+    To help you better understand how to integrate images using the methods outlined above, we have a project you can explore: [Kadabra Project Example](https://kadabra.dev/projects/e823fedf-238d-4313-86a8-1fd4bfc2a9ba). In this project, you can see the actual prompts and how each method works in practice.
 
     Additionally, here's a public GitHub repository that includes the commits, uploaded images, and full implementation details. You can view the repository here: [GitHub: Adding Images Example](https://github.com/viborc/adding-images-example).
 

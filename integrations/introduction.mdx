@@ -4,13 +4,13 @@ description: "Extend your website's functionality by using integrations and exte
 icon: "link"
 ---
 
-Lovable has native seamless integrations to export code and to add a backend. But it is also possible to integrate an external API if you are looking to add that specific functionality to your website.
+Kadabra has native seamless integrations to export code and to add a backend. But it is also possible to integrate an external API if you are looking to add that specific functionality to your website.
 
 ## What is an API?
 
 An API is a way for software applications to communicate and share data with each other.
 Different APIs offer different functionality such as sending emails or processing payments.
-You can read more about the power of APIs in [this article on our blog](https://lovable.dev/blog/2025-01-28-the-power-of-apis).
+You can read more about the power of APIs in [this article on our blog](https://kadabra.dev/blog/2025-01-28-the-power-of-apis).
 
 ## Native Integrations
 
@@ -18,7 +18,7 @@ Explore the sections below to get started quickly and learn more about our nativ
 
 <CardGroup cols="2">
   <Card title="GitHub Integration" icon="github" href="github">
-    Understand how to integrate Lovable with GitHub to export your code and for seamless version control.
+    Understand how to integrate Kadabra with GitHub to export your code and for seamless version control.
   </Card>
   <Card title="Supabase Integration" icon="database" href="supabase">
     Add a backend to your website using Supabase, to support authentication and persistent data storage.
@@ -27,7 +27,7 @@ Explore the sections below to get started quickly and learn more about our nativ
 
 ## Verified Integrations
 
-Verified integrations work best with Lovable:
+Verified integrations work best with Kadabra:
 
 <CardGroup cols="3">
   <Card title="Stripe" href="stripe">
@@ -72,7 +72,7 @@ Verified integrations work best with Lovable:
   <Card title="Stability AI" href="https://platform.stability.ai/docs/api-reference">
     Develops open AI models across various modalities.
   </Card>
-  <Card title="Figma" href="https://lovable.dev/blog/2025-01-22-figma-to-lovable-builder-io-native-integration">
+  <Card title="Figma" href="https://kadabra.dev/blog/2025-01-22-figma-to-kadabra-builder-io-native-integration">
     Import designs from your Figma workspace. 
   </Card>
   <Card title="Twilio" href="https://www.twilio.com/docs/messaging/api">
@@ -83,9 +83,9 @@ Verified integrations work best with Lovable:
   </Card>
 </CardGroup>
 
-You can always request new integrations [here](https://feedback.lovable.dev/?b=675883fb92175ba92d835f92).
+You can always request new integrations [here](https://feedback.kadabra.dev/?b=675883fb92175ba92d835f92).
 
-## Using Any API with Lovable
+## Using Any API with Kadabra
 
 All other callable APIs can still be integrated, but they often require additional context and instructions.
 
@@ -93,22 +93,22 @@ You might have:
 
 - **Internal systems with custom APIs**\
   These could be services your team has built (e.g. inventory systems, analytics pipelines, internal tools) that expose REST or GraphQL endpoints but aren’t publicly documented or widely known.
-  You want Lovable to pull from or send data to these systems to automate workflows or power user interfaces.
-- **Third-party APIs Lovable doesn’t yet support**\
-  Maybe you use a niche SaaS product, a specialized data provider, or a partner integration that Lovable doesn’t have built-in knowledge of.
-  Even though it’s not officially supported, you still want Lovable to connect, make calls, and work with the data.
+  You want Kadabra to pull from or send data to these systems to automate workflows or power user interfaces.
+- **Third-party APIs Kadabra doesn’t yet support**\
+  Maybe you use a niche SaaS product, a specialized data provider, or a partner integration that Kadabra doesn’t have built-in knowledge of.
+  Even though it’s not officially supported, you still want Kadabra to connect, make calls, and work with the data.
 
-In both cases, the challenge is the same: Lovable doesn’t “know” the API by default. But with good documentation and authentication setup, it can still use it effectively.
-Either way, the approach is the same: **Lovable can still connect to it**. Here’s how.
+In both cases, the challenge is the same: Kadabra doesn’t “know” the API by default. But with good documentation and authentication setup, it can still use it effectively.
+Either way, the approach is the same: **Kadabra can still connect to it**. Here’s how.
 
 <Steps>
-  <Step title="Give Lovable the context it needs">
-    Lovable works best when it understands the API. You can provide:
+  <Step title="Give Kadabra the context it needs">
+    Kadabra works best when it understands the API. You can provide:
 
     - **OpenAPI specification** (if available)
     - **Copy-pasted docs or examples** (especially endpoints and sample requests/responses)
 
-    The clearer the documentation, the better Lovable can reason about how to call the API.
+    The clearer the documentation, the better Kadabra can reason about how to call the API.
   </Step>
   <Step title="Handle authentication safely">
     For APIs that require authentication:
@@ -116,12 +116,12 @@ Either way, the approach is the same: **Lovable can still connect to it**. Here�
     **Option 1: Use Supabase Edge Functions as a proxy**
 
     - Store secrets securely on Supabase
-    - Let Lovable call the API endpoint via the Edge Function (not the API directly)
+    - Let Kadabra call the API endpoint via the Edge Function (not the API directly)
 
-    **Option 2: Implement the API integration directly in your Lovable project**
+    **Option 2: Implement the API integration directly in your Kadabra project**
 
     - Expose an authentication endpoint (e.g. to exchange credentials for a token or session)
-    - Let Lovable call that auth endpoint as part of the integration flow
+    - Let Kadabra call that auth endpoint as part of the integration flow
     - Include tokens, headers, or session info in subsequent API calls
   </Step>
 </Steps>

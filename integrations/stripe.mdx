@@ -4,20 +4,20 @@ description: "How to set up payments in your app using our Stripe integration"
 icon: "credit-card"
 ---
 
-![Integrate Stripe in Lovable](/images/lovable-stripe.webp)
+![Integrate Stripe in Kadabra](/images/kadabra-stripe.webp)
 
-Lovable now lets you set up Stripe entirely through **chat**.
+Kadabra now lets you set up Stripe entirely through **chat**.
 
 **Chat‑driven auto‑setup (recommended)**  
    After you connect **Supabase** and save your **Stripe Secret Key** via **Add API Key**, just describe what you need:  
    - “Add three subscription tiers …”  
    - “Create a one‑time checkout for my e‑book at $29”  
-   Lovable generates the checkout / portal edge functions, database tables with RLS, and UI buttons—no manual coding or webhooks unless you ask for them.
+   Kadabra generates the checkout / portal edge functions, database tables with RLS, and UI buttons—no manual coding or webhooks unless you ask for them.
 
 
 <Note>
   * For **one‑off sales**, be sure your cart or product page already works.
-  * For **subscriptions**, confirm Supabase Auth is in place so Lovable can link Stripe customers to each user’s **id**
+  * For **subscriptions**, confirm Supabase Auth is in place so Kadabra can link Stripe customers to each user’s **id**
 </Note>
 
 
@@ -25,7 +25,7 @@ Lovable now lets you set up Stripe entirely through **chat**.
 
 - Use the **chat‑driven flow** for both subscriptions and one‑off payments.  
 - **Never paste your Stripe Secret Key in chat.** Configure it via the in-chat **Add API Key** form.  
-- **Webhooks are opt‑in.** Lovable relies on edge‑function polling unless you request webhooks.  
+- **Webhooks are opt‑in.** Kadabra relies on edge‑function polling unless you request webhooks.  
 - Debug in **Browser Console → Network/Errors**, **Supabase → Edge Functions → Logs**, and **Stripe Dashboard → Logs**.  
 - Always test in **Stripe Test Mode**, then deploy.
 
@@ -33,7 +33,7 @@ Lovable now lets you set up Stripe entirely through **chat**.
 
 Before integrating Stripe, ensure the following prerequisites are met:
 
-- The project **must** be connected to Supabase. [Learn more about Supabase](https://docs.lovable.dev/integrations/supabase)
+- The project **must** be connected to Supabase. [Learn more about Supabase](https://docs.kadabra.dev/integrations/supabase)
 - A **Stripe account** with properly configured products.
 - A working **frontend and backend**:
   - For individual product sales, ensure a shopping cart and checkout page are functional.
@@ -46,7 +46,7 @@ Before integrating Stripe, ensure the following prerequisites are met:
 
 ## Stripe Payment Setup (No‑Code Chat Flow)
 
-Lovable now generates all Stripe logic for you. Once your **Stripe Secret Key** is configured via the in-chat **Add API Key** form and your project is **connected to Supabase**, simply tell Lovable what you need in chat—no manual Payment Links required.
+Kadabra now generates all Stripe logic for you. Once your **Stripe Secret Key** is configured via the in-chat **Add API Key** form and your project is **connected to Supabase**, simply tell Kadabra what you need in chat—no manual Payment Links required.
 
 <Steps>
   <Step title="Step 1">
@@ -64,7 +64,7 @@ Lovable now generates all Stripe logic for you. Once your **Stripe Secret Key** 
   </Step>
   <Step title="Step 3">
     **Review & apply**
-    Lovable auto‑scaffolds the Edge Functions, database tables, and UI components (all tied to the user's id in Supabase). Check the preview, then click **Apply** to deploy.
+    Kadabra auto‑scaffolds the Edge Functions, database tables, and UI components (all tied to the user's id in Supabase). Check the preview, then click **Apply** to deploy.
   </Step>
 </Steps>
 
@@ -74,7 +74,7 @@ Lovable now generates all Stripe logic for you. Once your **Stripe Secret Key** 
 
 ## Advanced Integration: Webhooks & Supabase
 
-For complex payment structures such as **subscriptions and role-based access**, Lovable recommends using **Supabase** to securely handle Stripe integration. This allows for proper webhook handling, subscription management, and role-based access control based on payment tiers.
+For complex payment structures such as **subscriptions and role-based access**, Kadabra recommends using **Supabase** to securely handle Stripe integration. This allows for proper webhook handling, subscription management, and role-based access control based on payment tiers.
 
 <Note>
   The Edge Function that handles the necessary changes to the user account should be set up automatically by the AI.
@@ -82,19 +82,19 @@ For complex payment structures such as **subscriptions and role-based access**, 
 
 <Steps>
   <Step title="Connect Supabase to Your Project">
-    Getting started is simple. Lovable makes connecting Supabase effortless with a built-in native integration:
+    Getting started is simple. Kadabra makes connecting Supabase effortless with a built-in native integration:
 
-    1. Click the **Supabase button** in the top right corner of Lovable.
+    1. Click the **Supabase button** in the top right corner of Kadabra.
     2. Follow the instructions to link your project.
     3. Once connected, Supabase enables secure payment processing, subscription management, webhook handling, customer data storage, and error handling.
   </Step>
   <Step title="Secure Payment Processing">
-    Initiate the process by prompting Lovable:
+    Initiate the process by prompting Kadabra:
 
     <Note>
       Let's connect Stripe to my project. We will begin with secure payment processing.
     </Note>
-    Lovable will generate the necessary SQL schema for handling payments. This includes database tables for users, subscriptions, and payments. You can review and customize these tables to fit your specific product needs before applying changes.
+    Kadabra will generate the necessary SQL schema for handling payments. This includes database tables for users, subscriptions, and payments. You can review and customize these tables to fit your specific product needs before applying changes.
   </Step>
   <Step title="Implement Edge Functions for Webhooks">
     **Edge Functions** in Supabase act as small, high-performance serverless functions that run close to the user, ensuring fast responses. They help process webhook events, such as payment confirmations, before updating the database.
@@ -105,7 +105,7 @@ For complex payment structures such as **subscriptions and role-based access**, 
       </Step>
       <Step title="Step 2">
         **Go to Stripe Dashboard** \> Developers \> Webhooks \> Create an Event Destination.
-        ![Stripe API Key](https://lovable.dev/content/news/stripe-api.png)
+        ![Stripe API Key](https://kadabra.dev/content/news/stripe-api.png)
       </Step>
       <Step title="Step 3">
         **Select Webhook Events** that align with your project needs:
@@ -123,7 +123,7 @@ For complex payment structures such as **subscriptions and role-based access**, 
         **Copy the Webhook Secret** and store it securely in **Supabase → Edge Functions → Manage Secrets → Add New Secret**.
 
         <Info>
-          If unsure about naming the secret, ask Lovable in **chat mode** for guidance.
+          If unsure about naming the secret, ask Kadabra in **chat mode** for guidance.
         </Info>
       </Step>
     </Steps>
@@ -138,15 +138,15 @@ For complex payment structures such as **subscriptions and role-based access**, 
         **Go to Stripe Dashboard** \> Developers \> API Keys.
       </Step>
       <Step title="Step 2">
-        **Copy the Secret Key** (DO NOT paste it directly in Lovable chat).
+        **Copy the Secret Key** (DO NOT paste it directly in Kadabra chat).
       </Step>
       <Step title="Step 3">
-        **Use the Lovable "Add API Key" feature** to securely store it.
+        **Use the Kadabra "Add API Key" feature** to securely store it.
 
         <Warning>
           **Important Security Warning**
 
-          Never paste your **Secret Key** directly in Lovable chat. Treat it like the keys to your house—exposing it could allow unauthorized access to your Stripe account. Instead, store it securely using Lovable's API key feature.
+          Never paste your **Secret Key** directly in Kadabra chat. Treat it like the keys to your house—exposing it could allow unauthorized access to your Stripe account. Instead, store it securely using Kadabra's API key feature.
         </Warning>
       </Step>
     </Steps>
@@ -173,7 +173,7 @@ For complex payment structures such as **subscriptions and role-based access**, 
         Look for errors and review webhook event logs.
       </Step>
       <Step title="Step 3">
-        Copy error messages and ask Lovable for debugging assistance.
+        Copy error messages and ask Kadabra for debugging assistance.
       </Step>
     </Steps>
   </Accordion>
@@ -203,13 +203,13 @@ For complex payment structures such as **subscriptions and role-based access**, 
       </Step>
     </Steps>
   </Accordion>
-  <Accordion title="Use Lovable Chat Mode">
+  <Accordion title="Use Kadabra Chat Mode">
     <Steps>
       <Step title="Step 1">
-        Switch to **chat mode** and ask Lovable follow-up questions.
+        Switch to **chat mode** and ask Kadabra follow-up questions.
       </Step>
       <Step title="Step 2">
-        Ask Lovable follow-up questions.
+        Ask Kadabra follow-up questions.
       </Step>
       <Step title="Step 3">
         Use the **Rubber Duck Method** & explain your issue step by step to clarify the problem.

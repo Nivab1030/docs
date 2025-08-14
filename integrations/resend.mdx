@@ -1,6 +1,6 @@
 ---
 title: "Resend Integration"
-description: "Learn how to integrate Resend with your Lovable application"
+description: "Learn how to integrate Resend with your Kadabra application"
 icon: "envelope"
 ---
 
@@ -14,7 +14,7 @@ icon: "envelope"
 
 This tutorial walks you through building a fully functional CRM in under an hour—complete with lead collection, email confirmation, newsletter subscription, and an internal admin dashboard. You'll use:
 
-- **Lovable**: to generate the front end and backend logic.
+- **Kadabra**: to generate the front end and backend logic.
 - **Supabase**: for secure data storage and authentication.
 - **Resend**: to automate and track transactional \+ marketing emails.
 
@@ -22,19 +22,19 @@ Let’s get started.
 
 <Steps>
   <Step title="Create a Landing Page with a Contact Form">
-    Use Lovable's AI to quickly generate a landing page for your product or service.
+    Use Kadabra's AI to quickly generate a landing page for your product or service.
 
     **Instructions:**
 
     <Steps>
-      <Step title="New Lovable Project">
-        Create a new Lovable project.
+      <Step title="New Kadabra Project">
+        Create a new Kadabra project.
       </Step>
       <Step title="Prompt:">
         <Info>
           Create a SaaS landing page with a contact form collecting name, email, and message.
         </Info>
-        ![Landing Page Lovable Project Pn](/images/landing-page-lovable-project.png)
+        ![Landing Page Kadabra Project Pn](/images/landing-page-kadabra-project.png)
       </Step>
       <Step title="Inspect the generated code">
         Inspect the generated code or use the select tool to tweak elements.
@@ -54,7 +54,7 @@ Let’s get started.
         Create a free Supabase account and a new project.
       </Step>
       <Step title="API Key">
-        In Lovable, connect your Supabase project using the API key.
+        In Kadabra, connect your Supabase project using the API key.
 
         ![Supabase Resend Email Pn](/images/supabase-resend-email.png)
       </Step>
@@ -84,7 +84,7 @@ Let’s get started.
         - Use subdomains like `updates.domain.com` to manage email reputation better.
       </Step>
       <Step title="API Key">
-        Integrate the API key in Lovable via environment settings or backend function.
+        Integrate the API key in Kadabra via environment settings or backend function.
       </Step>
       <Step title="SDK">
         Use Resend’s SDK to send a confirmation email on form submission.
@@ -103,7 +103,7 @@ Let’s get started.
 
     <Steps>
       <Step title="Admin route">
-        Create an `/admin` route in Lovable.
+        Create an `/admin` route in Kadabra.
       </Step>
       <Step title="Supabase Authentication">
         Enable Supabase authentication with email/password login.
@@ -201,8 +201,8 @@ Let’s get started.
   </Step>
   <Step title="Final Touches & Best Practices">
     ![Audience Resend Pn](/images/audience-resend.png)
-    - **Error Handling**: Lovable might show build errors that are false positives. Always test your functionality live.
-    - **Reverting with Supabase**: If reverting code in Lovable, remember to manually delete associated Supabase policies or migrations—they're not rolled back automatically.
+    - **Error Handling**: Kadabra might show build errors that are false positives. Always test your functionality live.
+    - **Reverting with Supabase**: If reverting code in Kadabra, remember to manually delete associated Supabase policies or migrations—they're not rolled back automatically.
     - **Deliverability Tips**:
       - Use subdomains to isolate reputation.
       - Always include a plain text version of your email.

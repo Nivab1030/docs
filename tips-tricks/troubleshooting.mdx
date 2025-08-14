@@ -6,7 +6,7 @@ icon: "toolbox"
 
 ## "Try to Fix" error loops
 
-Building with Lovable makes coding faster and more intuitive—but even the best AI development tools can occasionally hit a snag. Sometimes your code won't run as expected, or you might notice unexpected behavior where the AI interprets your intent incorrectly.
+Building with Kadabra makes coding faster and more intuitive—but even the best AI development tools can occasionally hit a snag. Sometimes your code won't run as expected, or you might notice unexpected behavior where the AI interprets your intent incorrectly.
 
 Here's a step-by-step guide to help you navigate issues and get back on track:
 
@@ -14,7 +14,7 @@ Here's a step-by-step guide to help you navigate issues and get back on track:
 
 <Steps>
   <Step title="Use the Try to Fix Button First">
-    Click the **Try to Fix** button when an error shows up. Lovable will scan your logs, detect the issue, and attempt a quick fix. It's your fastest first move. If that doesn't work, it's time to dig deeper.
+    Click the **Try to Fix** button when an error shows up. Kadabra will scan your logs, detect the issue, and attempt a quick fix. It's your fastest first move. If that doesn't work, it's time to dig deeper.
   </Step>
   <Step title="Diagnose Unexpected Behavior">
     Your code may run without errors but not behave as intended. That's **unexpected behavior**—harder to spot and harder to fix. Try this:
@@ -39,12 +39,12 @@ Here's a step-by-step guide to help you navigate issues and get back on track:
     2. Connect Supabase or your backend.
     3. Set up authentication and user roles.
     4. Plan and organize feature logic.
-    5. Prompt Lovable to implement features.
+    5. Prompt Kadabra to implement features.
   </Step>
   <Step title="Use Chat Mode for Clarity">
     When unsure, switch to **Chat Mode**:
 
-    - Ask Lovable to **analyze your project state**.
+    - Ask Kadabra to **analyze your project state**.
     - Request a **recap of attempted solutions**.
     - Prompt for **new directions** to solve persistent problems.
   </Step>
@@ -79,7 +79,7 @@ Use the accordions below to identify specific issues and actions:
   <Accordion title="UI or Layout Problems">
     - Check component hierarchy and styles.
     - Use screenshots to explain visual bugs.
-    - Prompt Lovable with: "Why is this element misaligned? Fix it."
+    - Prompt Kadabra with: "Why is this element misaligned? Fix it."
   </Accordion>
   <Accordion title="When completely stuck">
     - Prompt: "Take a step back. Analyze the error and suggest a different approach."
@@ -169,7 +169,7 @@ Use the accordions below to identify specific issues and actions:
   <Accordion title="Error with Edge Functions">
     - **l Scope:** Use the principle of least privilege for all credentials
 
-    When using Lovable with Supabase, always store sensitive API keys as Supabase Edge Function secrets rather than environment variables or in source code.
+    When using Kadabra with Supabase, always store sensitive API keys as Supabase Edge Function secrets rather than environment variables or in source code.
   </Accordion>
   <Accordion title="Setting Environment Variables">
     Double-check syntax and variable names. See the [Supabase docs](https://supabase.com/docs).
@@ -187,12 +187,12 @@ Use the accordions below to identify specific issues and actions:
     Usually means a backend server isn't responding. Use chat mode to debug.
   </Accordion>
   <Accordion title="Connecting Supabase">
-    To connect your Lovable project to Supabase:
+    To connect your Kadabra project to Supabase:
 
     1. Click the Supabase menu in the top right of the editor
     2. Select "Connect to Supabase"
     3. Follow the prompts to connect to your Supabase project
-    4. Once connected, Lovable can see your tables, RLS policies, and functions
+    4. Once connected, Kadabra can see your tables, RLS policies, and functions
   </Accordion>
 </AccordionGroup>
 
@@ -223,45 +223,45 @@ Use the accordions below to identify specific issues and actions:
     #### **Branch Management:**
 
     - **Create a new branch:** Click "Create new branch" in the Git panel
-    - **Delete a branch:** Use the GitHub interface (not available directly in Lovable)
+    - **Delete a branch:** Use the GitHub interface (not available directly in Kadabra)
     - **Default branch:** Set in GitHub repository settings
 
     If you can't switch branches:
 
     - Commit or stash any uncommitted changes
     - Check if you have untracked files that would be overwritten
-    - Try refreshing the Lovable editor
+    - Try refreshing the Kadabra editor
   </Accordion>
   <Accordion title="Repository sync issues">
-    - Check your [GitHub permissions](https://docs.lovable.dev/integrations/git-integration).
+    - Check your [GitHub permissions](https://docs.kadabra.dev/integrations/git-integration).
     - Use rollback to undo unwanted changes.
   </Accordion>
   <Accordion title="Deleted repository, now nothing works">
     [Restore your GitHub repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/restoring-a-deleted-repository).
   </Accordion>
   <Accordion title="Connecting GitHub">
-    To connect your Lovable project to GitHub:
+    To connect your Kadabra project to GitHub:
 
     1. Click the GitHub button in the top right of the editor
-    2. Authorize Lovable to access your GitHub account
+    2. Authorize Kadabra to access your GitHub account
     3. Choose whether to create a new repository or use an existing one
     4. Follow the prompts to complete the connection
 
     #### **Repository Access Levels:**
 
-    When connecting Lovable to GitHub, you can choose different access levels:
+    When connecting Kadabra to GitHub, you can choose different access levels:
 
     - **All repositories:** Access to all your GitHub repositories
     - **Only select repositories:** Choose specific repositories to connect
 
     <Info>
-      Lovable uses GitHub's OAuth flow for secure authentication. You can revoke access anytime from your GitHub account settings.
+      Kadabra uses GitHub's OAuth flow for secure authentication. You can revoke access anytime from your GitHub account settings.
     </Info>
   </Accordion>
   <Accordion title="Authentication Issues">
     If you're having trouble with GitHub authentication:
 
-    - Reconnect your GitHub account in Lovable
+    - Reconnect your GitHub account in Kadabra
     - Check if your GitHub access token has expired
     - Verify you have the necessary permissions for the repository
     - Ensure two-factor authentication isn't blocking access
@@ -286,10 +286,10 @@ Use the accordions below to identify specific issues and actions:
 
 Still stuck? Try this:
 
-1. Use [Chat Mode](https://lovable.dev/chat) for step-by-step help.
-2. Submit a bug through our [Feedback Portal](https://feedback.lovable.dev/).
-3. If you're a paid customer, contact [Support](https://lovable.dev/support).
+1. Use [Chat Mode](https://kadabra.dev/chat) for step-by-step help.
+2. Submit a bug through our [Feedback Portal](https://feedback.kadabra.dev/).
+3. If you're a paid customer, contact [Support](https://kadabra.dev/support).
 
 ## Comprehensive Debugging Manual
 
-[This document](https://docs.google.com/document/d/1dfIy5rtkPN9Zi4smX1VAbfbhAiEyBvVw8p7B8kJiEVs/edit?tab=t.0) or [this website](https://kb-lovable.netlify.app/?tab=errors#errors) were written by a Lovable power user in our Discord community. 
+[This document](https://docs.google.com/document/d/1dfIy5rtkPN9Zi4smX1VAbfbhAiEyBvVw8p7B8kJiEVs/edit?tab=t.0) or [this website](https://kb-kadabra.netlify.app/?tab=errors#errors) were written by a Kadabra power user in our Discord community. 

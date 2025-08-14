@@ -4,10 +4,10 @@ description: "Implement secure, centralized authentication for your entire organ
 icon: "shield-keyhole"
 ---
 
-Single Sign-On (SSO) is available as a business feature in Lovable, enabling secure, centralized authentication across your organization. 
+Single Sign-On (SSO) is available as a business feature in Kadabra, enabling secure, centralized authentication across your organization. 
 With SSO, users can access all their tools with one set of credentials, simplifying access management and improving security. 
 
-Lovable supports integration with major identity providers, including Google Workspace, Microsoft Azure AD, Okta, and more. 
+Kadabra supports integration with major identity providers, including Google Workspace, Microsoft Azure AD, Okta, and more. 
 
 ### Setup SSO
 To set up SSO, a **Workspace Owner** or **Admin** must log in and navigate to  
@@ -16,14 +16,14 @@ To set up SSO, a **Workspace Owner** or **Admin** must log in and navigate to
 In your identity provider, configure the following settings:
 
 **Redirect URI / ACS URL:**
-https://auth.lovable.dev/__/auth/handler
+https://auth.kadabra.dev/__/auth/handler
 
 **Audience URI / Entity ID:**
-https://auth.lovable.dev/__/auth/handler
+https://auth.kadabra.dev/__/auth/handler
 
 **Required Claims:**
 Make sure the SAML response includes first_name, last_name and email as attributes.
-These attributes are required for authentication and user provisioning in Lovable.
+These attributes are required for authentication and user provisioning in Kadabra.
 
 ### Common Issues and Troubleshooting
 <AccordionGroup>

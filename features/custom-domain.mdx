@@ -1,10 +1,10 @@
 ---
 title: "Custom domain"
-description: "Add your own domain to any Lovable project."
+description: "Add your own domain to any Kadabra project."
 icon: "earth-europe"
 ---
 
-Lovable makes it easy to [publish](/features/deploy) your project to the web, either on a free lovable staging subdomain (e.g. yoursite.lovable.app) or your own custom domain.
+Kadabra makes it easy to [publish](/features/deploy) your project to the web, either on a free kadabra staging subdomain (e.g. yoursite.kadabra.app) or your own custom domain.
 This guide walks you through how to connect your domain, troubleshoot common issues, and understand your options across different hosting providers.
 
 ## Why use a custom domain
@@ -19,13 +19,13 @@ Connecting a custom domain (e.g., yourdomain.com) improves your site's:
 
 Before you begin:
 
-- You must be on a paid Lovable plan.
+- You must be on a paid Kadabra plan.
 - You need to own a domain name. For easier setup, you can purchase one from providers like:
   - [Namecheap](https://www.namecheap.com)
   - [GoDaddy](https://www.godaddy.com)
   - [Full list of supported providers](https://developers.entri.com/provider-list)
 
-Lovable uses a tool called Entri to help you connect your domain quickly and securely. For some providers it offers an automatic DNS setup and www redirect.
+Kadabra uses a tool called Entri to help you connect your domain quickly and securely. For some providers it offers an automatic DNS setup and www redirect.
 
 ## Connect your domain (via Entri)
 
@@ -49,7 +49,7 @@ Lovable uses a tool called Entri to help you connect your domain quickly and sec
     Follow the prompts to log in to your provider and authorize access for Entri to update your DNS settings.
   </Step>
   <Step title="Close and Complete">
-    Click Close Window, return to Lovable, and click Done.
+    Click Close Window, return to Kadabra, and click Done.
   </Step>
 </Steps>
 
@@ -57,7 +57,7 @@ Lovable uses a tool called Entri to help you connect your domain quickly and sec
   DNS changes may take up to **48 hours to propagate**, though most updates are live within a few hours.
 </Warning>
 
-All set\! Once verified, your Lovable app will be live at your custom domain.
+All set\! Once verified, your Kadabra app will be live at your custom domain.
 
 ### What if my provider isn't listed?
 
@@ -73,7 +73,7 @@ If your provider isn’t supported by Entri, you can still connect your domain m
 
 ## Hosting on Third-Party Platforms
 
-You can also deploy your Lovable app using GitHub and host it on platforms like Netlify, Vercel, or using GitHub Pages with providers like Namecheap.
+You can also deploy your Kadabra app using GitHub and host it on platforms like Netlify, Vercel, or using GitHub Pages with providers like Namecheap.
 
 ### Netlify
 
@@ -81,20 +81,20 @@ You can also deploy your Lovable app using GitHub and host it on platforms like 
 2. Import it into Netlify and deploy.
 3. Add a domain in Netlify by going to Domain Management.
 4. Follow DNS instructions in Netlify to connect your custom domain.
-5. Done\! Your site redeploys automatically when changes are made in Lovable.
+5. Done\! Your site redeploys automatically when changes are made in Kadabra.
 
 ### Vercel
 
-1. Create a GitHub repo from Lovable.
+1. Create a GitHub repo from Kadabra.
 2. Import into Vercel and assign your custom domain.
 3. Create a development branch for staging.
 4. Set Vercel to only deploy from the main branch.
-5. Switch in Lovable to the development branch. Now you can make changes without them directly going live to production.
+5. Switch in Kadabra to the development branch. Now you can make changes without them directly going live to production.
 6. Deploy changes to production when ready by merging dev → main.
 
 ### Namecheap \+ GitHub Pages
 
-Use [this guide](https://custom-domain.lovable.app/) made by one of our users, to get personalized step-by-step instructions on how to set it up.
+Use [this guide](https://custom-domain.kadabra.app/) made by one of our users, to get personalized step-by-step instructions on how to set it up.
 
 ## FAQ
 
@@ -107,15 +107,15 @@ Use [this guide](https://custom-domain.lovable.app/) made by one of our users, t
     - Clear your browser cache or test in an incognito window.
     - Try removing and re-adding the domain in Project \> Settings \> Domains.
   </Accordion>
-  <Accordion title="Can I buy a domain through Lovable?">
-    Lovable doesn't sell domains directly, but have partnered with IONOS to facilitate the setup.
+  <Accordion title="Can I buy a domain through Kadabra?">
+    Kadabra doesn't sell domains directly, but have partnered with IONOS to facilitate the setup.
     Please click the "Buy Domain" button in the Project Settings \> Domains to buy a domain through IONOS.
   </Accordion>
   <Accordion title="Will connecting a custom domain affect my SEO?">
     Yes, positively. A custom domain improves your site's discoverability in search engines and makes it look more trustworthy to users.
   </Accordion>
-  <Accordion title="Does Lovable provide an SSL certificate for my custom domain?">
-    Yes\! When you connect a custom domain to your Lovable app, we automatically generate and install a SSL certificate for it.
+  <Accordion title="Does Kadabra provide an SSL certificate for my custom domain?">
+    Yes\! When you connect a custom domain to your Kadabra app, we automatically generate and install a SSL certificate for it.
     This ensures your site is served over HTTPS, keeping your visitors’ data secure and improving your site's SEO ranking.
     If it hasn't been issued after 48 hours, please reach out to support.
   </Accordion>
@@ -123,7 +123,7 @@ Use [this guide](https://custom-domain.lovable.app/) made by one of our users, t
     Yes\! You can connect a subdomain (like blog.yourdomain.com or app.yourdomain.com) instead of the root domain.
     When entering your domain in the setup flow, just include the subdomain you want to use.
   </Accordion>
-  <Accordion title="Can I connect multiple subdomains to my Lovable project?">
+  <Accordion title="Can I connect multiple subdomains to my Kadabra project?">
     You can connect multiple subdomains, but each one must be added and configured individually.\
     For example, if you want to use blog.yourdomain.com, shop.yourdomain.com, and app.yourdomain.com, you’ll need to repeat the connection process for each subdomain in Project \> Settings \> Domains.
   </Accordion>
@@ -132,10 +132,10 @@ Use [this guide](https://custom-domain.lovable.app/) made by one of our users, t
     2. Click the bin-icon next to your domain
     3. Your domain will be disconnected from the project. Make sure to clear DNS settings in your domain provider to completely clear the connection.
   </Accordion>
-  <Accordion title="Can I remove the .lovable.app subdomain?">
-    Currently there is no way to remove the .lovable.app subdomain from your project.
+  <Accordion title="Can I remove the .kadabra.app subdomain?">
+    Currently there is no way to remove the .kadabra.app subdomain from your project.
   </Accordion>
   <Accordion title="Do I need to connect a www subdomain separately?">
-    The www subdomain configuration is included when you set up your root domain, so there’s no need to add it separately in the Lovable UI.
+    The www subdomain configuration is included when you set up your root domain, so there’s no need to add it separately in the Kadabra UI.
   </Accordion>
 </AccordionGroup>

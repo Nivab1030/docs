@@ -4,7 +4,7 @@ description: "Debug workflows, with strategies, sample prompts, troubleshooting 
 icon: "bug"
 ---
 
-Building with AI is fast and fun – until something goes wrong. Errors, unexpected behaviors, or “the AI did something weird” moments are part of the process. This guide will help you navigate **AI-based debugging workflows in Lovable**. We’ll cover how to quickly fix simple issues, strategies for tougher bugs, using Lovable’s chat for debugging, and even prompt recipes to systematically squash bugs. Debugging with an AI assistant is a new skill, but with structure and the right prompts, you can resolve problems efficiently and even turn them into learning opportunities. 
+Building with AI is fast and fun – until something goes wrong. Errors, unexpected behaviors, or “the AI did something weird” moments are part of the process. This guide will help you navigate **AI-based debugging workflows in Kadabra**. We’ll cover how to quickly fix simple issues, strategies for tougher bugs, using Kadabra’s chat for debugging, and even prompt recipes to systematically squash bugs. Debugging with an AI assistant is a new skill, but with structure and the right prompts, you can resolve problems efficiently and even turn them into learning opportunities. 
 
 ## Advanced Debugging Prompts
 
@@ -106,7 +106,7 @@ Running this in Chat mode will give you a diagnostic report. The AI might say fo
 - _Bundle size:_ All pages are in one bundle. Consider code-splitting (dynamic `import()` for large modules) so initial load is faster.
 - ...”\*
 
-Each suggestion comes from common performance best practices​. You can then decide which ones to implement. Maybe you prompt Lovable to apply one of them: _“Implement caching for project data using context as suggested.”_ By addressing these, you improve user experience and possibly reduce costs (fewer calls, less computation).
+Each suggestion comes from common performance best practices​. You can then decide which ones to implement. Maybe you prompt Kadabra to apply one of them: _“Implement caching for project data using context as suggested.”_ By addressing these, you improve user experience and possibly reduce costs (fewer calls, less computation).
 
 ### Handling Persistent Errors
 
@@ -115,7 +115,7 @@ What about errors that just won’t go away or keep coming back in slight variat
 - **Ask the AI what it has tried already.** Sometimes after a few “Try to Fix” attempts or manual prompts, it’s unclear what’s been changed. Use: \_“What solutions have we tried so far for this error?”\_​. The AI can list the attempts, which helps you avoid repeating the same fixes.
 - **Have the AI explain the error in simple terms.** _“Explain in simple terms why this error occurs.”_ This can reveal if the AI (and you) truly understand it. You might catch a misconception here.
 - **Consider an alternate approach.** Ask: \_“Given this error keeps happening, can we try a different approach to achieve the goal?”\_​. The AI might suggest a different implementation strategy that bypasses the problematic area.
-- **Revert and replay.** In worst-case scenarios, you might roll back a few steps (Lovable lets you restore older versions). Then proceed with smaller changes. You can even tell the AI: _“We’re going to undo the last changes and try a more incremental approach.”_ This resets the context a bit and often avoids the rut you were in.
+- **Revert and replay.** In worst-case scenarios, you might roll back a few steps (Kadabra lets you restore older versions). Then proceed with smaller changes. You can even tell the AI: _“We’re going to undo the last changes and try a more incremental approach.”_ This resets the context a bit and often avoids the rut you were in.
 
 Finally, if a specific component is “dead” (not working at all, no matter what), isolate it. Create a fresh minimal version of that component via prompt to see if it works, then slowly integrate it back into your project. This is akin to turning things off and on again, but with code – sometimes starting fresh on a piece is easier than trying to patch an overly broken one.
 
@@ -182,7 +182,7 @@ _Flow:_
   <Step title="AI figures out maybe the API key for the email service wasn’t set or the service blocked it.">
     
   </Step>
-  <Step title="You then fix the API key in settings (outside of Lovable) or prompt to adjust the function to use a different method.">
+  <Step title="You then fix the API key in settings (outside of Kadabra) or prompt to adjust the function to use a different method.">
     
   </Step>
 </Steps>
@@ -220,9 +220,9 @@ In this flow, the key was to notice the component was completely gone and commun
   Here's the copy/paste from Dev tools console, can you fix the issue?
   
   Error occurred:
-  TypeError: Q9() is undefined  at https://example.lovable.app/assets/index-DWQbrtrQQj.js
+  TypeError: Q9() is undefined  at https://example.kadabra.app/assets/index-DWQbrtrQQj.js
   : 435 : 39117 index-DWQbrtrQQj.js:435:35112
-  onerror https://example.lovable.app/assets/index-DWQbrtrQQj.js:435
+  onerror https://example.kadabra.app/assets/index-DWQbrtrQQj.js:435
   ```
 </Note>
 
@@ -244,7 +244,7 @@ This leads to more robust solutions.
 
 ### **Rollback wisely:**
 
-Lovable allows you to roll back to previous versions. Don’t hesitate to use that if the code has become too tangled by a series of bad fixes. It’s often faster to rewind and try a different approach. If you do rollback, let the AI know what you’re doing (so it doesn’t get confused by code that suddenly looks different). For instance:
+Kadabra allows you to roll back to previous versions. Don’t hesitate to use that if the code has become too tangled by a series of bad fixes. It’s often faster to rewind and try a different approach. If you do rollback, let the AI know what you’re doing (so it doesn’t get confused by code that suddenly looks different). For instance:
 
 <Info>
   _I reverted the project to before the notifications feature. Let’s implement it again, but more carefully this time._
@@ -278,7 +278,7 @@ The AI’s summary can be saved in a `README` or log. This is great for future y
 
 ### **Know when to ask for human help:**
 
-Sometimes, despite all efforts, you might hit a wall (maybe a true bug in the Lovable platform or something outside your/AI control). The Lovable community and support are there for you. There’s no shame in reaching out on their Discord or forums with a question. Often, others have faced a similar issue. Use the AI to gather as much info as possible first (so you can provide details), and then ask the community if needed.
+Sometimes, despite all efforts, you might hit a wall (maybe a true bug in the Kadabra platform or something outside your/AI control). The Kadabra community and support are there for you. There’s no shame in reaching out on their Discord or forums with a question. Often, others have faced a similar issue. Use the AI to gather as much info as possible first (so you can provide details), and then ask the community if needed.
 
 ## Community Debugging Guidebook
 
