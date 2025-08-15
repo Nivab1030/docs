@@ -1,175 +1,161 @@
 ---
-title: "Plans and credits"
-description: "Understanding plans, credit usage and credit rollovers in Kadabra"
+title: "Plans and Credits"
+description: "Plans, seats, usage limits, and how credits work in Kadabra"
 icon: "money-bill-wave"
 ---
 
-Kadabra is a subscription based service with a free plan and several paid plans. When you pay for a subscription you get access to more features, and more credits. You need credits to send messages in Kadabra.
+# Plans and credits
 
-## Feature comparison: Free plan vs. Paid plans
+Kadabra is priced for teams that want to ship real automations and keep governance tight. Plans combine seats, environments, and a monthly credit pool that powers AI steps and runtime features. Annual billing includes a discount. All prices are placeholders. Replace before publish.
 
-### Free Plan
+> For security and support details see **Security** and **Support policy**.
 
-- 5 daily credits up to a maximum of 30 per month
-- Workspace collaboration with unlimited members
+---
 
-### Pro plan
+## Plans at a glance
 
-- 5 daily credits up to a maximum of 150 per month
-- Monthly credits depending on your plan
-- Workspace collaboration with unlimited members
-- Workspace roles and permissions
-- Private projects
-- Ability to connect custom domains to your Kadabra projects
-- Ability to remove the "Edit with Kadabra" badge from your Kadabra projects
-- Access to Code mode to edit code directly inside of Kadabra
+| Plan | Best for | Seats included | Environments | Projects | Monthly credit pool | Data retention | Support |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **Starter** | Solo makers and trials | 1 Creator | 1 env | 1 project | 50k credits | 7 days | Community |
+| **Team** | Small teams shipping first flows | 3 Creator + 3 Reviewer + unlimited Viewer | 2 envs | 3 projects | 500k credits | 30 days | Email support |
+| **Business** | Cross functional teams with guardrails | 10 Creator + 10 Reviewer + unlimited Viewer | 3 envs | 10 projects | 2M credits | 90 days | Priority support |
+| **Enterprise** | Scale, governance, and advanced security | Custom | 4 envs | Unlimited | Custom | Custom | SLA, TAM optional |
 
-### Business plan
+- **Creator** can design, edit, test, and publish flows.
+- **Reviewer** can approve changes, run flows, and view logs.
+- **Viewer** can view dashboards and logs without making changes.
 
-_Everything in Pro, plus:_
+---
 
-- SSO
-- Personal projects within workspaces
-- Opt out of data training
-- Build reusable design templates to streamline your projects
+## Credits 101
 
-### Available Paid Plans
+Credits meter usage across AI steps and runtime features. The goal is to make costs predictable and keep you focused on shipping tasks, not micro managing tokens.
 
-Each paid plan includes a set number of allocated monthly credits. We offer both **Pro** and **Business** plans, each with different pricing options and unique perks to suit individual users or teams. You can choose to pay for these plans either monthly or annually. Annual billing offers additional benefits such as a discounted monthly rate and higher rollover limits for unused credits.
+### What consumes credits
 
-**Pro**
+- **LLM steps** - every AI node counts input tokens and output tokens. 1 credit equals 1k tokens counted on the larger of input or output per step. Rounded up per step.
+- **Embedding steps** - 1 credit equals 2k tokens embedded.
+- **Toolformer actions** that call external tools from an AI node - billed like LLM steps.
+- **Long running work** - queued work beyond 60 seconds per step consumes 1 credit per extra minute, rounded up.
+- **Headless browser** steps if enabled - 1 credit per minute of active session.
 
-| Monthly credits | Monthly billing | Annual billing           |
-| --------------- | --------------- | ------------------------ |
-| 100             | \$25            | \$250 (\$21/month)       |
-| 200             | \$50            | \$500 (\$42/month)       |
-| 400             | \$100           | \$1,000 (\$84/month)     |
-| 800             | \$200           | \$2,000 (\$167/month)    |
-| 1,200           | \$294           | \$2,940 (\$245/month)    |
-| 2,000           | \$480           | \$4,800 (\$400/month)    |
-| 3,000           | \$705           | \$7,050 (\$588/month)    |
-| 4,000           | \$920           | \$9,200 (\$767/month)    |
-| 5,000           | \$1,125         | \$11,250 (\$938/month)   |
-| 7,500           | \$1,688         | \$16,880 (\$1,407/month) |
-| 10,000          | \$2,250         | \$22,500 (\$1,875/month) |
+### What does not consume credits
 
-**Business**
+- Drafting flows on the canvas
+- Test runs in Dev with sample data up to a small daily cap
+- Pure deterministic steps like transforms, routers, simple API calls
+- Viewing logs, metrics, and dashboards
 
-| Monthly credits | Monthly billing | Annual billing           |
-| --------------- | --------------- | ------------------------ |
-| 100             | \$50            | \$500 (\$42/month)       |
-| 200             | \$100           | \$1,000 (\$84/month)     |
-| 400             | \$200           | \$2,000 (\$167/month)    |
-| 800             | \$400           | \$4,000 (\$334/month)    |
-| 1,200           | \$588           | \$5,880 (\$490/month)    |
-| 2,000           | \$960           | \$9,600 (\$800/month)    |
-| 3,000           | \$1,410         | \$14,100 (\$1,175/month) |
-| 4,000           | \$1,840         | \$18,400 (\$1,534/month) |
-| 5,000           | \$2,250         | \$22,500 (\$1,875/month) |
-| 7,500           | \$3,300         | \$33,000 (\$2,750/month) |
-| 10,000          | \$4,300         | \$43,000 (\$3,584/month) |
+> Bring your own vendor keys where possible to control third party spend. Kadabra respects per key budgets and caps.
 
-<Note>
-  When you upgrade your plan, for example, from a 100 credit plan to a 200 credit plan you don’t get 200 new credits.
-  Instead, your total credits for the month are updated to 200. So if you already had 100 monthly credits upgrading gives you 100 more, not 200 more.
-</Note>
+---
 
-## Credit display
-To view how many credits you have or have used, simply press your workspace name on the main dashboard or the project name when inside the project editor. 
-You'll see how many credits you have left this billing period, as well as the credit bar. 
-The credit bar provides a visual representation of how many credits a user has remaining and how many have been used. 
-- **Grey part**: Shows the amount of credits already used this billing period. 
-- **Blue parts**: Shows different types of remaining credits. Hovering over each colored section will display a tooltip indicating the credit type and the exact number of credits available for that type.
+## Credit math examples
 
-<Frame>
-  <video autoPlay loop muted playsInline className="w-full">
-    <source src="/assets/introduction/videos/credit-bar.mp4" type="video/mp4" />
-  </video>
-</Frame>
+**Example A - content brief flow**  
+2 AI steps per run. Average 800 input tokens and 300 output tokens per step.  
+Per step billed tokens = max(800, 300) = 800. Credits per step = 800 or 0.8k rounded up to 1 credit.  
+Credits per run = 2 credits.  
+If you run it 10k times per month you will use about 20k credits.
 
-## Credit usage
+**Example B - enrichment flow with embeddings**  
+1 embedding step at 4k tokens + 1 AI step at 1.5k output tokens.  
+Embedding credits = 4k or 2 credits. AI step credits = 1.5k or 2 credits.  
+Credits per run = about 4 credits.
 
-Kadabra has a usage-based credit system, where sending messages deducts credits. 
-The cost of a message depends on its complexity to ensure you only pay for what you actually use. 
+**Example C - long running headless step**  
+Browser session lasts 3 minutes. Credits = 3. Combine with any AI steps.
 
-Many messages cost less than 1 credit, while more complex ones may cost more. 
-This approach allows for more precise edits and greater efficiency per message, making Kadabra more affordable overall.
+Use the **Monitoring** page to track actual usage per flow and set budgets.
 
-Here are some example prompts and their cost:
+---
 
-| User Prompt                        | Work done                                                         |  Credits used      |
-| ---------------------------------- | ----------------------------------------------------------------- | ------------------ |
-| Make the button gray               | Changes the button styles                                         | 0.50               |
-| Remove the footer                  | Removes the footer component                                      | 0.90               |
-| Add authentication                 | Adds login and authentication logic                               | 1.20               |
-| Build a landing page with images   | Creates a landing page with generated images, a theme and sections| 2.00               |
+## Limits and guardrails
 
-<Card title="View credits used" img="/assets/introduction/images/view-credits-on-message-agent.png">
-You can see the cost of each message in the chat history by pressing the three dots beneath a message.
-</Card>
+- **Per run caps** - set a maximum credits per run. The flow pauses for approval if a run would exceed the cap.
+- **Per flow monthly budgets** - set budgets by flow. Runs throttle or pause once budgets are met.
+- **Workspace caps** - stop runaway use by setting a workspace wide limit with alerts and optional kill switch.
+- **Rate limits** - avoid vendor throttling by configuring per integration rate limits.
+- **Data retention** - control how long to keep input and output snapshots per plan.
 
-## Credit Rollovers
+---
 
-Unused credits automatically roll over at the end of each billing cycle for both monthly and annual paid plans, as long as you keep an active subscription, subject to the limitations outlined below.
+## Overages and top ups
 
-**Rollover credit limits:**
+- If you exceed the monthly pool we keep running your flows using **overage pricing** or stop at your chosen hard cap.
+- You can **top up** credits at any time. Top ups never expire.
+- Unused monthly credits **do not roll over** unless on Enterprise with a custom agreement.
 
-- **Monthly plans**: Rollover credits can accumulate up to the monthly credit limit.
-- **Annual plans**: Rollover credits can accumulate up to 12 times the monthly credit limit (i.e. the annual limit).
-- **Rollover credits expiration:** Rollover credits are valid up to one month after being added for monthly plans, and 12 months after being added for annual plans.
-- **Cancellation**: Upon cancellation of a paid subscription, all unused and rollover credits will expire at the end of the current billing period and will not carry over.
+---
 
-<Warning>
-  Daily credits do not roll over. Unused daily credits will **not accumulate** from day to day for the free tier or for the paid tiers.
-</Warning>
+## Seats and roles
 
-For detailed information about subscription options, visit our [pricing page](https://kadabra.dev/pricing).
+- **Creators** draft flows with the Kadabra Agent, edit on the Visual Canvas, and publish to Stage and Prod.
+- **Reviewers** approve changes, manage policies, and perform rollbacks.
+- **Viewers** see dashboards, runbooks, and read only logs.
+- **Owners** manage billing, SSO, and workspace level settings.
 
-## FAQ
+Map seats to least privilege needed. Use service accounts for CI and programmatic publish.
 
-<AccordionGroup>
-  <Accordion title="What is a credit?">
-    Credits are used when sending messages in Kadabra.
-  </Accordion>
-  <Accordion title="How can I upgrade my subscription?">
-    To upgrade your subscription click your profile icon top right of the dashboard → Settings → Plans & Billing. Choose your desired amount of credits in the credits per month dropdown and then click "Upgrade". Complete the upgrade in the Stripe portal.
-  </Accordion>
-  <Accordion title="How can I downgrade my subscription?">
-    To downgrade your subscription click your profile icon top right of the dashboard → Settings → Plans & Billing. Choose your desired amount of credits in the credits/month dropdown and then click "Downgrade". Complete the downgrade in Kadabra and then in the Stripe portal. Your current plan will remain active until the end of the current billing period.
-  </Accordion>
-  <Accordion title="How can I cancel my subscription?">
-    To cancel your subscription click your profile icon top right of the dashboard → Settings → Plans & Billing. Click "Downgrade" under the Free plan, and complete the steps. Your current plan will remain active until the end of the current billing period.
-  </Accordion>
-  <Accordion title="How can I change my billing information?">
-    To change your billing information click your profile icon top right of the dashboard → Settings → Plans & Billing → Manage your payment preferences. You'll be redirected to the Stripe portal where you can change your information.
-  </Accordion>
-  <Accordion title="How do I download my invoices?">
-    You can access your past invoices by click your profile icon top right of the dashboard → Settings → Plans & Billing → Manage your payment preferences. You'll be redirected to the Stripe portal where you can find past invoices.
-  </Accordion>
-  <Accordion title="How do I get more credits?">
-    You can upgrade your plan in your Account Settings to access more credits.
-  </Accordion>
-  <Accordion title="When does my credit limit reset?">
-    Your credit limit will reset when your billing period resets. This happens every month on the same date and time that you started your subscription.
-  </Accordion>
-  <Accordion title="Can I buy a top-up of credits?">
-    No, the only way to access more credits before your billing period resets is to upgrade to a higher plan.
-  </Accordion>
-  <Accordion title="How do I see the remaining credits in a workspace?">
-    You can see the remaining credits by pressing the profile icon top right of the dashboard, or by pressing the dropdown on the project name whilst in the project editor.
-  </Accordion>
-  <Accordion title="Can I get free credits?">
-    We do **not offer free credits** through support requests.
-  </Accordion>
-</AccordionGroup>
+---
 
-## Common Issues and Troubleshooting
+## Environments and projects
 
-<AccordionGroup>
-  <Accordion title="I can't pay for my subscription. What should I do?">
-    Occasionally, payment setups may fail due to issues with Stripe. If this occurs, double-check your payment details and retry. If the problem persists, please try using a different payment method.
-  </Accordion>
-  <Accordion title="I've paid but still don't have access to my plan. What should I do?">
-    Please reach out to support on [support@kadabra.dev](mailto:support@kadabra.dev).
-  </Accordion>
-</AccordionGroup>
+- **Environments** isolate credentials, webhooks, and logs. Typical setup is Dev, Stage, Prod.
+- **Projects** group flows, secrets, and dashboards by domain, such as GTM, Ops, or Support.
+- **Promotion** moves a version from Dev to Stage to Prod with checks and approvals.
+
+See **Publish** for details.
+
+---
+
+## Billing and invoices
+
+- Monthly or annual billing. Annual includes a discount.
+- Invoices include a usage breakdown by flow, env, and integration.
+- Pay by card or invoice. Enterprise can use PO and wire.
+- Taxes are added where required.
+
+---
+
+## Add ons
+
+- SSO SAML and SCIM user provisioning
+- Advanced audit export to your data warehouse
+- Dedicated region or VPC deployment
+- Custom tokenization or PII redaction rules
+- Higher retention tiers
+- Headless browser pack
+
+> Some add ons are Enterprise only. Talk to sales.
+
+---
+
+## Upgrading or downgrading
+
+- Upgrades are prorated and effective immediately.
+- Downgrades take effect next billing cycle. Keep overage coverage until then.
+- You can export flows and runbooks at any time.
+
+---
+
+## Refunds
+
+We do not offer refunds for a billing period already in progress. If something went wrong reach out via **Support** and we will work with you.
+
+---
+
+## Glossary
+
+- **Credit** - the unit used to meter AI and runtime usage.
+- **Project** - a workspace scoped folder for flows, secrets, and dashboards.
+- **Environment** - Dev, Stage, Prod isolation for secrets and webhooks.
+- **Run** - a single execution of a flow with full trace.
+
+---
+
+## Next steps
+
+- Read **FAQ** for common plan and credit questions
+- Set budgets and caps under **Monitoring**
+- Invite teammates and assign roles under **Settings**

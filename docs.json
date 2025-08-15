@@ -14,25 +14,6 @@
     "dark": "#0084E6"
   },
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Announcements",
-          "icon": "newspaper",
-          "href": "https://kadabra.dev/blog?category=announcements"
-        },
-        {
-          "anchor": "Status",
-          "icon": "signal",
-          "href": "https://status.kadabra.dev/"
-        },
-        {
-          "anchor": "Feature requests",
-          "icon": "rocket",
-          "href": "https://feedback.kadabra.dev/"
-        }
-      ]
-    },
     "tabs": [
       {
         "tab": "Introduction",
@@ -76,14 +57,6 @@
           "prompting/example-prompts",
           "prompting/debug"
         ]
-      },
-      {
-        "tab": "Glossary",
-        "pages": ["glossary"]
-      },
-      {
-        "tab": "Changelog",
-        "pages": ["changelog"]
       }
     ]
   },
