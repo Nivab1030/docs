@@ -45,62 +45,26 @@
       },
       {
         "tab": "Features",
-        "groups": [
-          {
-            "group": "Core Features",
-            "pages": [
-              "features/modes",
-              "features/visual-edit",
-              "features/code-mode",
-              "features/knowledge",
-              "features/collaboration",
-              "features/private-projects",
-              "features/publish",
-              "features/analytics",
-              "features/custom-domain",
-              "features/seo",
-              "features/security",
-              "features/labs",
-              "features/figma-to-kadabra"
-            ]
-          },
-          {
-            "group": "Business Features",
-            "pages": [
-              "features/business/sso",
-              "features/business/data-opt-out",
-              "features/business/personal-projects",
-              "features/business/design-templates"
-            ]
-          }
+        "pages": [
+          "features/kadabra-agent",
+          "features/visual-canvas",
+          "features/publish",
+          "features/monitoring",
+          "features/security"
         ]
       },
       {
         "tab": "Integrations",
         "pages": [
-          "integrations/introduction",
-          "integrations/github",
-          "integrations/supabase",
-          "integrations/stripe",
-          "integrations/resend",
-          "integrations/clerk",
-          "integrations/make",
-          "integrations/replicate",
-          "integrations/ai",
-          "integrations/21stdev"
+          "integrations/introduction"
         ]
       },
       {
-        "tab": "Tips & tricks",
+        "tab": "Tips & Tricks",
         "pages": [
           "tips-tricks/best-practice",
           "tips-tricks/troubleshooting",
-          "tips-tricks/using-images",
-          "tips-tricks/using-videos",
-          "tips-tricks/custom-fonts",
-          "tips-tricks/npm-packages",
-          "tips-tricks/chrome-extensions",
-          "tips-tricks/from-idea-to-app",
+          "tips-tricks/from-idea-to-working-flow",
           "tips-tricks/community",
           "tips-tricks/support-policy"
         ]
@@ -108,21 +72,9 @@
       {
         "tab": "Prompt Engineering",
         "pages": [
-          "prompting/prompting-one",
-          "prompting/prompting-library",
-          "prompting/prompting-debugging",
-          "prompt-integrations"
-        ]
-      },
-      {
-        "tab": "Use Cases",
-        "pages": [
-          "use-case/inspiration",
-          "use-case/video-tutorials",
-          "use-case/landing-page",
-          "use-case/prototype",
-          "use-case/saas",
-          "use-case/launched"
+          "prompting/prompting-101",
+          "prompting/example-prompts",
+          "prompting/debug"
         ]
       },
       {

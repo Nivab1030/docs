@@ -1,0 +1,380 @@
+---
+title: "Debug"
+description: "Troubleshoot and fix issues with your prompts and AI responses"
+icon: "bug"
+---
+
+<CardGroup cols="2">
+  <Card title="Common Issues" icon="exclamation-triangle">
+    Identify and resolve typical prompt engineering problems
+  </Card>
+  <Card title="Debugging Strategies" icon="search">
+    Systematic approaches to troubleshooting AI responses
+  </Card>
+</CardGroup>
+
+Even with the best prompt engineering practices, you may encounter issues where the AI doesn't respond as expected. This guide will help you identify, diagnose, and fix common problems to get better results from your prompts.
+
+## Common Prompt Issues & Solutions
+
+### **Vague or Unclear Responses**
+
+**Problem:** The AI gives generic or unhelpful responses.
+
+**Symptoms:**
+- Responses that are too broad or general
+- Missing specific implementation details
+- Code that doesn't match your requirements
+- Explanations that don't address your specific needs
+
+**Solutions:**
+```
+❌ Vague Prompt:
+"Build me a website"
+
+✅ Specific Prompt:
+"Create a landing page for my SaaS startup that includes:
+- Hero section with headline and CTA button
+- Feature overview with 3 key benefits
+- Pricing table with 3 tiers
+- Contact form with email validation
+Use modern design principles and make it mobile-responsive."
+```
+
+**Debugging Steps:**
+1. **Add more context** about your project and goals
+2. **Specify technical requirements** (frameworks, libraries, etc.)
+3. **Include examples** of what you're looking for
+4. **Break down complex requests** into smaller, specific parts
+
+### **Incorrect Technical Implementation**
+
+**Problem:** The AI generates code that doesn't work or uses wrong technologies.
+
+**Symptoms:**
+- Syntax errors in generated code
+- Using outdated or incompatible libraries
+- Missing dependencies or imports
+- Incorrect API usage or patterns
+
+**Solutions:**
+```
+❌ Unclear Technical Requirements:
+"Build a user authentication system"
+
+✅ Clear Technical Requirements:
+"Create a user authentication system using:
+- React 18 with TypeScript
+- Supabase for backend authentication
+- Tailwind CSS for styling
+- React Router for navigation
+Include login, signup, and password reset functionality."
+```
+
+**Debugging Steps:**
+1. **Specify exact versions** of frameworks and libraries
+2. **Mention any constraints** or limitations
+3. **Reference specific APIs** or services you want to use
+4. **Ask for explanations** of the technical approach
+
+### **Missing Features or Functionality**
+
+**Problem:** The AI omits important features or doesn't implement everything you requested.
+
+**Symptoms:**
+- Incomplete feature implementation
+- Missing error handling or validation
+- Lack of responsive design
+- Absence of accessibility features
+
+**Solutions:**
+```
+❌ Incomplete Requirements:
+"Add a search feature"
+
+✅ Complete Requirements:
+"Implement a search feature that includes:
+- Search input with debounced typing
+- Real-time search results as you type
+- Search history and suggestions
+- No results state with helpful messaging
+- Loading states and error handling
+- Mobile-optimized search interface"
+```
+
+**Debugging Steps:**
+1. **List all requirements explicitly** in bullet points
+2. **Specify edge cases** and error scenarios
+3. **Request specific features** like loading states or error handling
+4. **Ask for confirmation** that all requirements are met
+
+### **Style and Design Mismatches**
+
+**Problem:** The generated design doesn't match your vision or brand.
+
+**Symptoms:**
+- Wrong color schemes or typography
+- Inconsistent design patterns
+- Poor visual hierarchy
+- Unprofessional appearance
+
+**Solutions:**
+```
+❌ Unclear Design Preferences:
+"Make it look professional"
+
+✅ Clear Design Preferences:
+"Design the interface with:
+- Modern, minimalist aesthetic similar to Stripe
+- Primary color: #3B82F6 (blue)
+- Secondary color: #6B7280 (gray)
+- Clean typography using Inter font
+- Generous white space and clear visual hierarchy
+- Subtle shadows and smooth transitions"
+```
+
+**Debugging Steps:**
+1. **Reference specific design systems** or websites you like
+2. **Specify exact colors** and typography preferences
+3. **Describe the visual style** in detail
+4. **Include design examples** or mockups if possible
+
+## Debugging Strategies
+
+### **The Iterative Approach**
+
+Instead of trying to fix everything at once, use an iterative debugging process:
+
+<Steps>
+  <Step title="Identify the Problem">
+    Clearly define what's wrong with the current response
+  </Step>
+  <Step title="Analyze the Cause">
+    Determine why the AI misunderstood or missed something
+  </Step>
+  <Step title="Refine the Prompt">
+    Make specific improvements to address the issue
+  </Step>
+  <Step title="Test the Fix">
+    Try the improved prompt and evaluate the results
+  </Step>
+  <Step title="Iterate Further">
+    Continue refining until you get the desired outcome
+  </Step>
+</Steps>
+
+### **The Diagnostic Checklist**
+
+Use this checklist to systematically identify prompt issues:
+
+- [ ] **Clarity:** Is my request specific and unambiguous?
+- [ ] **Context:** Did I provide enough background information?
+- [ ] **Requirements:** Are all features and constraints clearly stated?
+- [ ] **Examples:** Did I include relevant examples or references?
+- [ ] **Technical Details:** Are frameworks and technologies specified?
+- [ ] **Success Criteria:** Do I clearly define what success looks like?
+
+### **The Feedback Loop**
+
+Create a continuous improvement cycle:
+
+1. **Send your prompt** and get the AI's response
+2. **Evaluate the response** against your requirements
+3. **Identify gaps** or areas for improvement
+4. **Refine your prompt** based on what was missing
+5. **Repeat the process** until you're satisfied
+
+## Specific Debugging Techniques
+
+### **Breaking Down Complex Requests**
+
+**Problem:** Complex requests often lead to incomplete or incorrect implementations.
+
+**Solution:** Break down complex features into smaller, manageable pieces:
+
+```
+❌ Complex Request:
+"Build a complete e-commerce platform with user management, product catalog, shopping cart, checkout, payment processing, order management, and admin dashboard"
+
+✅ Broken Down Request:
+"Let's build this step by step. First, create the basic user authentication system with login and registration forms. Once that's working, we'll move on to the product catalog."
+```
+
+### **Using Examples and References**
+
+**Problem:** The AI may not understand your vision without concrete examples.
+
+**Solution:** Provide specific examples and references:
+
+```
+❌ Abstract Description:
+"Create a modern dashboard"
+
+✅ Specific Examples:
+"Create a dashboard similar to Notion's interface with:
+- Left sidebar navigation
+- Main content area with cards
+- Clean, minimal design
+- Subtle shadows and rounded corners
+- Muted color palette with blue accents"
+```
+
+### **Requesting Explanations**
+
+**Problem:** Sometimes the AI implements something but doesn't explain why.
+
+**Solution:** Ask for explanations of the approach:
+
+```
+"Please implement this feature and explain:
+- Why you chose this specific approach
+- How the implementation works
+- What alternatives you considered
+- Any potential improvements or optimizations"
+```
+
+### **Testing with Simple Prompts**
+
+**Problem:** Complex prompts can mask underlying issues.
+
+**Solution:** Start with simple prompts to establish a baseline:
+
+```
+"Create a simple button component with:
+- Primary and secondary variants
+- Hover effects
+- Disabled state
+- Basic styling with Tailwind CSS
+
+Once this works, we'll add more advanced features."
+```
+
+## Common Error Patterns
+
+### **The "Kitchen Sink" Problem**
+
+**Problem:** Including too many requirements in a single prompt.
+
+**Symptoms:**
+- Incomplete implementation
+- Confused or inconsistent responses
+- Missing important features
+- Poor quality code
+
+**Solution:** Focus on one feature at a time and build incrementally.
+
+### **The "Assumption Gap" Problem**
+
+**Problem:** Assuming the AI knows your project context or preferences.
+
+**Symptoms:**
+- Responses that don't fit your project
+- Wrong technology choices
+- Inappropriate design decisions
+- Missing project-specific requirements
+
+**Solution:** Always provide context and don't assume shared knowledge.
+
+### **The "Vague Success Criteria" Problem**
+
+**Problem:** Not clearly defining what a successful response looks like.
+
+**Symptoms:**
+- Responses that technically work but don't meet your needs
+- Missing important aspects of functionality
+- Inappropriate complexity or simplicity
+- Poor user experience
+
+**Solution:** Define clear success criteria and acceptance criteria.
+
+## Advanced Debugging Techniques
+
+### **Prompt Chaining**
+
+Use multiple prompts to build complex features:
+
+```
+Prompt 1: "Create a basic user registration form with email and password fields"
+
+Prompt 2: "Now add email validation and password strength requirements to the existing form"
+
+Prompt 3: "Finally, add a terms of service checkbox and submit button to the form"
+```
+
+### **Context Preservation**
+
+Maintain context across multiple interactions:
+
+```
+"Building on our previous conversation about the user dashboard, please add a profile editing section that allows users to update their name, email, and profile picture."
+```
+
+### **Alternative Approaches**
+
+When the AI's approach doesn't work, ask for alternatives:
+
+```
+"The current implementation isn't working as expected. Can you suggest a different approach to solve this problem? Please explain the trade-offs of each approach."
+```
+
+### **Code Review Requests**
+
+Ask the AI to review and improve existing code:
+
+```
+"Please review this code and identify:
+- Any bugs or issues
+- Performance improvements
+- Security concerns
+- Code quality improvements
+- Better alternatives or approaches"
+```
+
+## Getting Help When Debugging Fails
+
+### **Community Support**
+
+- **Join the Kadabra Discord** to ask for help with specific issues
+- **Share your prompts and responses** to get feedback from other users
+- **Learn from similar problems** that others have solved
+
+### **Documentation Resources**
+
+- **Review the Prompting 101 guide** for fundamental techniques
+- **Check the Example Prompts** for proven patterns
+- **Use the troubleshooting guides** for specific error types
+
+### **Escalation Strategies**
+
+When you're stuck:
+1. **Simplify your request** to the absolute basics
+2. **Start over** with a completely new approach
+3. **Ask for help** in the community
+4. **Document the issue** to help others avoid the same problem
+
+## Debugging Checklist
+
+Before sending a prompt, ensure:
+
+- [ ] **Clear Requirements:** All features and constraints are explicitly stated
+- [ ] **Adequate Context:** Sufficient background information is provided
+- [ ] **Specific Examples:** Relevant examples or references are included
+- [ ] **Technical Details:** Frameworks, libraries, and versions are specified
+- [ ] **Success Criteria:** What success looks like is clearly defined
+- [ ] **Error Handling:** Edge cases and error scenarios are considered
+- [ ] **Iterative Approach:** Complex requests are broken into manageable pieces
+
+## Need More Debugging Help?
+
+<CardGroup cols="2">
+  <Card title="Prompting 101" icon="lightbulb" href="/prompting/prompting-101">
+    Review the fundamentals of effective prompt engineering
+  </Card>
+  <Card title="Example Prompts" icon="copy" href="/prompting/example-prompts">
+    Study proven prompt patterns and examples
+  </Card>
+</CardGroup>
+
+<Note>
+  **Remember:** Debugging prompts is a skill that improves with practice. Don't get discouraged if your first attempts don't work perfectly. Use these techniques to systematically improve your prompts and get better results from the AI.
+</Note> 

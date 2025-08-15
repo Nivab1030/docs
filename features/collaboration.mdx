@@ -1,93 +1,195 @@
 ---
 title: "Collaboration"
-description: "Work together on your Kadabra projects"
+description: "Work together on your Kadabra projects with seamless team collaboration"
 icon: "people-group"
 ---
 
-Kadabra lets you build websites together. Invite your designer, developer, agency, or anyone else. Everyone sees changes as they happen.
+<CardGroup cols="2">
+  <Card title="Project Collaboration" icon="folder-open" href="#collaboration-in-a-specific-project">
+    Invite team members to work on specific projects
+  </Card>
+  <Card title="Workspace Management" icon="building" href="#collaboration-in-a-workspace">
+    Manage your entire team and workspace settings
+  </Card>
+</CardGroup>
 
-There are two ways of collaborating. You can invite collaborators to a specific project or to your entire workspace.
+Kadabra lets you build websites together with your team. Invite designers, developers, agencies, or anyone else to collaborate. Everyone sees changes in real-time, making teamwork seamless and efficient.
+
+There are two ways to collaborate: **project-level** and **workspace-level**. Choose the approach that best fits your team's needs.
 
 ## Collaboration in a specific project
 
-You can invite users to work together on a specific project by pressing "Invite" in the project editor.
-Add their email, and they'll receive an invite to their email.
+<Steps>
+  <Step title="Open Project Editor">
+    Navigate to your project and open the editor where you want to collaborate.
+  </Step>
+  <Step title="Click Invite Button">
+    Look for the **"Invite"** button in the project editor interface.
+  </Step>
+  <Step title="Add Collaborator Email">
+    Enter the email address of the person you want to invite.
+  </Step>
+  <Step title="Send Invitation">
+    The collaborator will receive an email invitation to join your project.
+  </Step>
+</Steps>
 
 <Note>
-  Collaborators will use credits from the project owner's workspace.
+  **Important:** Collaborators will use credits from the project owner's workspace. Make sure you have sufficient credits available.
 </Note>
 
 ## Collaboration in a Workspace
 
 ### What is a Workspace?
 
-A workspace is your shared space for building and collaborating on projects. You can invite your teammates to your workspace, and they'll have access to all the projects in it.
-They can see, edit and publish the workspaces's projects.
+A workspace is your team's central hub for building and collaborating on projects. Think of it as your digital office where everyone can access shared resources and work together seamlessly.
+
+**Key Benefits:**
+- **Centralized Access:** Team members can see, edit, and publish all workspace projects
+- **Shared Resources:** Credits and integrations are shared across the workspace
+- **Team Management:** Easy collaboration and permission management
+- **Unified Experience:** Consistent workflow for all team members
 
 <Warning>
-  For granular permission control and role assignment in your workspace, a paid subscription is needed.
+  **Premium Feature:** Granular permission control and role assignment require a paid subscription plan.
 </Warning>
 
-When you subscribe to a plan it gets tied to your desired workspace, and then all projects in the workspace use those credits, no matter who sends the messages.
+### Workspace Setup & Customization
 
-You can customize your workspace in the workspace settings by:
+<CardGroup cols="3">
+  <Card title="Rename Workspace" icon="edit">
+    Give your workspace a memorable name that reflects your team or company
+  </Card>
+  <Card title="Customize Avatar" icon="image">
+    Upload a logo or image to make your workspace easily identifiable
+  </Card>
+  <Card title="Add Description" icon="file-text">
+    Describe your workspace purpose and guidelines for team members
+  </Card>
+</CardGroup>
 
-- Renaming it
-- Changing the avatar
-- Writing a description
+### Managing Workspace Collaborators
 
-### How do I add and manage collaborators in a Workspace?
+<Steps>
+  <Step title="Access Settings">
+    Go to **Settings** → **People** in your workspace
+  </Step>
+  <Step title="Add New Members">
+    Input email addresses to send collaboration invitations
+  </Step>
+  <Step title="Manage Roles">
+    Assign appropriate permissions based on team member responsibilities
+  </Step>
+  <Step title="Monitor Usage">
+    Track monthly credit usage for each collaborator
+  </Step>
+</Steps>
 
-You manage and add collaborators from the People tab in the workspace settings. You can access it by going to **Settings** \> **People**.
+**Available Actions:**
+- ✅ Add new collaborators via email invitation
+- ✅ Manage existing collaborator roles and permissions
+- ✅ Remove team members when needed
+- ✅ Monitor individual credit usage and activity
 
-Here you can:
+## Permissions & Access Control
 
-- Add new collaborators by inputting their email. They'll receive an invite to their email that they then can accept.
-- Manage existing collaborators by changing their roles or removing them.
-- See monthly credits usage for each collaborator
+<Note>
+  **Free Plan Limitation:** Free plans do not include admin roles. Upgrade to unlock advanced permission management.
+</Note>
 
-## Permissions
+### Project-Level Permissions
 
-Please note that free plans do not have admin roles.
+| Permission | **Editor** | **Admin** | **Owner** |
+|------------|------------|-----------|-----------|
+| **Add Editor** | ✅ | ✅ | ✅ |
+| **Add Admin** | ❌ | ❌ | ✅ |
+| **Remove Editor** | ✅ | ✅ | ✅ |
+| **Remove Admin** | ❌ | ❌ | ✅ |
+| **Magic Link** | ✅ | ✅ | ✅ |
+| **Publish** | ❌ | ✅ | ✅ |
+| **Transfer to GitHub** | ✅ | ✅ | ✅ |
 
-|                             | **Editor** | **Admin** | **Owner** |
-| --------------------------- | ---------- | --------- | --------- |
-| **Project**                 |            |           |           |
-| Add Editor                  | ✅          | ✅         | ✅         |
-| Add Admin                   | ❌          | ❌         | ✅         |
-| Remove Editor               | ✅          | ✅         | ✅         |
-| Remove Admin                | ❌          | ❌         | ✅         |
-| Magic Link                  | ✅          | ✅         | ✅         |
-| Publish                     | ❌          | ✅         | ✅         |
-| Transfer to GitHub          | ✅          | ✅         | ✅         |
-| **Workspace**               |            |           |           |
-| Add Editor                  | ❌          | ✅         | ✅         |
-| Add Admin                   | ❌          | ❌         | ✅         |
-| See Usage                   | ❌          | ✅         | ✅         |
-| Manage Plan                 | ❌          | ❌         | ✅         |
-| Remove Editor               | ❌          | ✅         | ✅         |
-| Remove Admin                | ❌          | ❌         | ✅         |
-| Connect/disconnect Supabase | ❌          | ✅         | ✅         |
-| Connect/disconnect GitHub   | ❌          | ✅         | ✅         |
+### Workspace-Level Permissions
 
-**Legend**
+| Permission | **Editor** | **Admin** | **Owner** |
+|------------|------------|-----------|-----------|
+| **Add Editor** | ❌ | ✅ | ✅ |
+| **Add Admin** | ❌ | ❌ | ✅ |
+| **View Usage** | ❌ | ✅ | ✅ |
+| **Manage Plan** | ❌ | ❌ | ✅ |
+| **Remove Editor** | ❌ | ✅ | ✅ |
+| **Remove Admin** | ❌ | ❌ | ✅ |
+| **Manage Supabase** | ❌ | ✅ | ✅ |
+| **Manage GitHub** | ❌ | ✅ | ✅ |
 
-- ✅ = Permission granted
-- ❌ = Permission denied
+<CardGroup cols="2">
+  <Card title="Permission Legend" icon="key">
+    ✅ = Permission granted<br/>
+    ❌ = Permission denied
+  </Card>
+  <Card title="Role Recommendations" icon="users">
+    **Editor:** Team members who need to build and edit<br/>
+    **Admin:** Project managers and team leads<br/>
+    **Owner:** Workspace creator with full control
+  </Card>
+</CardGroup>
 
-## FAQ
+## Frequently Asked Questions
 
 <AccordionGroup>
   <Accordion title="How many members can one Workspace have?">
-    Workspaces support unlimited members on all plans. For workspaces on Enterprise plans, custom member limits can be optionally set.
+    <div className="space-y-2">
+      <p>Workspaces support <strong>unlimited members</strong> on all plans.</p>
+      <p>For Enterprise plans, custom member limits can be optionally configured based on your organization's needs.</p>
+    </div>
   </Accordion>
+  
   <Accordion title="Can I have several Workspaces?">
-    Yes, but you'll need separate subscriptions for each one.
+    <div className="space-y-2">
+      <p><strong>Yes!</strong> You can create multiple workspaces to organize different teams or projects.</p>
+      <p><strong>Note:</strong> Each workspace requires a separate subscription plan.</p>
+    </div>
   </Accordion>
-  <Accordion title="Can I switch between Workspaces?">
-    Yes. Go to the main dashboard. From there press your workspace name. In the dropdown you'll see the other workspaces you have access to. To switch, simply click the desired workspace.
+  
+  <Accordion title="How do I switch between Workspaces?">
+    <Steps>
+      <Step title="Go to Dashboard">
+        Navigate to your main dashboard
+      </Step>
+      <Step title="Click Workspace Name">
+        Click on your current workspace name in the header
+      </Step>
+      <Step title="Select Workspace">
+        Choose your desired workspace from the dropdown menu
+      </Step>
+    </Steps>
   </Accordion>
-  <Accordion title="Is it possible to transfer projects between Workspaces?">
-    Yes\! Go to the project settings where you'll find the option to **Transfer** the project.
+  
+  <Accordion title="Can I transfer projects between Workspaces?">
+    <div className="space-y-2">
+      <p><strong>Absolutely!</strong> You can transfer projects between workspaces when needed.</p>
+      <Steps>
+        <Step title="Access Project Settings">
+          Go to the project you want to transfer
+        </Step>
+        <Step title="Find Transfer Option">
+          Look for the <strong>Transfer</strong> option in project settings
+        </Step>
+        <Step title="Select Destination">
+          Choose the target workspace for your project
+        </Step>
+      </Steps>
+    </div>
   </Accordion>
 </AccordionGroup>
+
+## Need Help with Collaboration?
+
+<CardGroup cols="2">
+  <Card title="Contact Support" icon="headset" href="/tips-tricks/support-policy">
+    Get help with collaboration features and team management
+  </Card>
+  <Card title="Join Community" icon="discord" href="https://discord.gg/kadabra-dev">
+    Connect with other users and share collaboration tips
+  </Card>
+</CardGroup>

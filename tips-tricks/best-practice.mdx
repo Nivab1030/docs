@@ -1,195 +1,395 @@
 ---
 title: "Best Practices"
-description: "Getting the Most Out of Kadabra"
-icon: "dumbbell"
+description: "Learn development best practices and techniques for building great applications with Kadabra"
+icon: "star"
 ---
 
-This guide helps all users—new or experienced—get up to speed quickly and avoid common pitfalls when building on Kadabra.
+<CardGroup cols="2">
+  <Card title="Development Principles" icon="code">
+    Core principles for building quality applications
+  </Card>
+  <Card title="Code Quality" icon="check-circle">
+    Techniques for writing maintainable, efficient code
+  </Card>
+</CardGroup>
 
-## 1. Set Your Foundation: Use the Knowledge File
+Building great applications requires more than just technical skills - it needs a solid foundation of best practices and proven techniques. This guide covers the essential principles and practices that will help you create high-quality, maintainable applications with Kadabra.
 
-**Why it matters:** The [_Knowledge_](https://docs.kadabra.dev/features/knowledge) file is your project’s brain. It gets sent with every prompt and helps the AI understand the full context.
+## Development Principles
 
-**What to include:**
+### **Start Simple, Iterate Often**
+The most successful applications are built through continuous improvement:
 
-- Your product vision (think of it like a PRD)
-- User journeys and personas
-- Key features and functionality
-- Design systems and UI guidance
-- Role-specific behavior (e.g. Admin, User, Investor)
+- **Begin with the MVP:** Focus on core functionality first
+- **Test early and often:** Validate your ideas with real users
+- **Iterate based on feedback:** Use user input to guide development
+- **Avoid over-engineering:** Don't build features you don't need yet
 
-<Tip>
-  You can auto-generate a Knowledge file via Chat mode:
+### **User-Centric Design**
+Always prioritize the user experience:
 
-  ```
-  Generate knowledge for my project at T=0 based on the features I’ve already implemented.
-  ```
-</Tip>
+- **Understand your users:** Research their needs and pain points
+- **Design for usability:** Make interfaces intuitive and accessible
+- **Test with real users:** Get feedback from actual target users
+- **Measure user behavior:** Use analytics to understand usage patterns
 
-## 2. [Prompting](https://docs.kadabra.dev/tips-tricks/prompting-one) Best Practices
+### **Performance First**
+Fast applications provide better user experiences:
 
-**Clear, verbose prompts = better output.** Think of the AI like your engineering partner—it only knows what you tell it.
+- **Optimize loading times:** Minimize initial bundle size
+- **Implement lazy loading:** Load resources only when needed
+- **Use efficient data fetching:** Implement proper caching strategies
+- **Monitor performance:** Track Core Web Vitals and other metrics
 
-**Prompting tips:**
+## Code Quality Standards
 
-- Be specific: Mention the exact page (e.g. `/dashboard`) and expected behavior.
-- Use natural language
+### **Clean Code Principles**
+Write code that's easy to read and maintain:
 
-  ```
-  I want users with the role Investor to access this component, but not Admins.
-  ```
-- Add screenshots: Especially useful for describing bugs or UX issues.
-- Add guardrails: Tell the AI what **not** to touch. E.g.
+**Naming Conventions:**
+- **Descriptive names:** Use names that clearly describe purpose
+- **Consistent patterns:** Follow established naming conventions
+- **Avoid abbreviations:** Use full words instead of shortcuts
+- **Meaningful variables:** Names should explain what data represents
 
-  ```
-  Do not edit /shared/Layout.tsx.
-  ```
-- Repeat important instructions across prompts. The AI’s memory can be limiting.
-- Avoid trying to implement 5 things at once. Break work into smaller, testable chunks. Use Chat Mode between each block to validate before moving on.
+**Code Structure:**
+- **Single responsibility:** Each function should do one thing well
+- **Logical organization:** Group related functionality together
+- **Consistent formatting:** Use consistent indentation and spacing
+- **Clear separation:** Separate concerns into different modules
 
-  ```
-  **Feature Breakdown Template:**
-  Create the new page
-  Add UI layout
-  Connect the data
-  Add logic + edge cases
-  Test per role
-  ```
-- If your app has multiple roles (e.g. Admin, Investor, Startup), always define _which role_ the prompt applies to. This helps avoid bugs caused by shared logic/components.
+### **Error Handling**
+Implement robust error handling throughout your application:
 
-  ```
-  As an Investor, I want to view the company dashboard, but I shouldn’t be able to edit it. Please isolate this feature to the Investor role only.
-  ```
+```
+// Good error handling
+try {
+  const result = await apiCall();
+  return result;
+} catch (error) {
+  console.error('API call failed:', error);
+  showUserFriendlyError('Unable to load data. Please try again.');
+  return null;
+}
 
-## 3. Use Chat Mode Early and Often
+// Poor error handling
+const result = await apiCall(); // What if this fails?
+return result;
+```
 
-[**Chat mode**](https://docs.kadabra.dev/features/labs#chat-mode) = your AI co-pilot. It helps you debug, brainstorm, and plan implementations—without editing your code until you’re ready.
+**Error Handling Best Practices:**
+- **Always handle errors:** Don't let errors crash your application
+- **User-friendly messages:** Show helpful error messages to users
+- **Log errors properly:** Include context for debugging
+- **Graceful degradation:** Provide fallbacks when features fail
 
-**When to switch to Chat Mode:**
+### **Code Documentation**
+Document your code for future maintainability:
 
-- After 2–3 failed “Try to Fix” attempts
-- When debugging complex logic or database issues
-- When planning new features
+**Inline Comments:**
+- **Explain complex logic:** Comment on why, not what
+- **Document assumptions:** Note important business rules
+- **Include examples:** Show how to use complex functions
+- **Keep comments current:** Update comments when code changes
 
-  ```
-  Suggest 3 ways to implement X
-  ```
+**API Documentation:**
+- **Function signatures:** Document parameters and return values
+- **Usage examples:** Provide practical examples
+- **Edge cases:** Document unusual scenarios and limitations
+- **Dependencies:** Note external dependencies and requirements
 
-<Tip>
-  **Workflow tip:**
+## Architecture Best Practices
 
-  Some users like to use Chat Mode for 60–70% of your time. Only click “Implement the plan” when you’re fully satisfied.
-</Tip>
+### **Component Design**
+Create reusable, maintainable components:
 
-<Tip>
-  If you forget using the Chat mode, this format improves output consistency and prevents collateral edits.
+**Component Principles:**
+- **Single responsibility:** Each component should have one clear purpose
+- **Props interface:** Define clear, typed interfaces for component props
+- **Default values:** Provide sensible defaults for optional props
+- **Error boundaries:** Handle errors gracefully within components
 
-  ```
-  On page /settings, implement [feature]. The expected behavior is [XYZ]. Please don’t touch component A, layout B, or shared logic unless necessary. Follow best practices from Tailwind / Supabase / X.
-  ```
-</Tip>
+**Component Structure:**
+```
+// Good component structure
+interface ButtonProps {
+  text: string;
+  onClick: () => void;
+  variant?: 'primary' | 'secondary';
+  disabled?: boolean;
+}
 
-<Tip>
-  To avoid unwanted code execution:
+const Button: React.FC<ButtonProps> = ({
+  text,
+  onClick,
+  variant = 'primary',
+  disabled = false
+}) => {
+  // Component implementation
+};
+```
 
-  ```
-  Investigate but don’t write code yet.
-  ```
+### **State Management**
+Choose the right state management approach:
 
-  ```
-  Suggest 3 ways to solve this without changing anything.
-  ```
+**Local State:**
+- **Component state:** Use for component-specific data
+- **Form state:** Manage form inputs and validation
+- **UI state:** Control component visibility and interactions
 
-  This keeps control in your hands.
-</Tip>
+**Global State:**
+- **User authentication:** Share user data across components
+- **Application settings:** Store user preferences and configuration
+- **Shared data:** Cache data used by multiple components
 
-<Tip>
-  When AI enters a "loop," use this sequence to avoid endless cycles of patching broken code:
+**State Management Libraries:**
+- **React Context:** Simple state sharing between components
+- **Zustand:** Lightweight state management
+- **Redux Toolkit:** Complex state management with dev tools
+- **TanStack Query:** Server state management and caching
 
-  1. Switch to Chat mode
-  2. Paste the error screenshot
-  3. Say:
+### **Data Flow**
+Design clear data flow patterns:
 
-     ```
-     Please investigate this without breaking other features. If needed, revert to the last working version and fix from there.
-     ```
-</Tip>
+**Unidirectional Data Flow:**
+- **Props down:** Pass data from parent to child components
+- **Events up:** Use callbacks to communicate changes upward
+- **Single source of truth:** Maintain data in one place
+- **Predictable updates:** Make state changes traceable and debuggable
 
-## 4. Avoid Common Pitfalls with Supabase
+**Data Fetching Patterns:**
+- **Centralized API calls:** Use custom hooks for data fetching
+- **Error boundaries:** Handle API errors gracefully
+- **Loading states:** Show appropriate loading indicators
+- **Caching strategies:** Implement smart caching for better performance
 
-**Heads-up:** [Supabase](https://docs.kadabra.dev/integrations/supabase) does not revert cleanly. If you revert a version, your database schema may break.
+## Performance Optimization
 
-**Best practices:**
+### **Bundle Optimization**
+Reduce your application's size and loading time:
 
-- Connect Supabase **after** front-end is stable
-- If you must revert, prompt the AI:
+**Code Splitting:**
+- **Route-based splitting:** Load code only for current routes
+- **Component lazy loading:** Load components on demand
+- **Dynamic imports:** Use dynamic imports for conditional loading
+- **Tree shaking:** Remove unused code from production builds
 
-  ```
-  Please validate the SQL schema at T=0 and ensure no breaking changes have occurred.
-  ```
-- Always test database-linked features before publishing
+**Asset Optimization:**
+- **Image optimization:** Compress and resize images appropriately
+- **Font loading:** Optimize web font loading and display
+- **CSS optimization:** Minimize and optimize stylesheets
+- **JavaScript minification:** Reduce JavaScript file sizes
 
-## 5. Use Visual Edit for Quick UI Fixes
+### **Runtime Performance**
+Optimize your application's runtime performance:
 
-The [**Visual Edit tool**](https://docs.kadabra.dev/features/visual-edit) is free and fast. Use it instead of prompts for:
+**React Optimization:**
+- **Memoization:** Use React.memo for expensive components
+- **Callback optimization:** Optimize event handlers with useCallback
+- **Dependency arrays:** Properly manage useEffect dependencies
+- **Virtual scrolling:** Implement virtual scrolling for large lists
 
-- Changing text, colors, fonts, layout tweaks
-- Editing multiple small elements at once
-- Safe, credit-free commits (with undo available)
+**Data Optimization:**
+- **Efficient queries:** Optimize database and API queries
+- **Pagination:** Implement proper pagination for large datasets
+- **Debouncing:** Debounce user input to reduce API calls
+- **Caching:** Implement smart caching strategies
 
-## 6. Use [GitHub](https://docs.kadabra.dev/integrations/git-integration) \+ Version Control Wisely
+## Security Best Practices
 
-- Every edit is a commit. Use **pinning** to mark stable versions. After every working feature: **Pin it**
-- After every bug: **Compare versions visually.** You can prompt with:
+### **Authentication & Authorization**
+Implement secure user management:
 
-  ```
-  Compare version at T–1 to T–0. What changed? What might be breaking?
-  ```
-- Come back to a stable version if you feel the AI has broken too much things.
-- Use **GitHub branching** at your own risk. Avoid deleting branches before switching back to `main` in Kadabra to prevent project sync issues.
+**Authentication:**
+- **Secure password handling:** Use proper password hashing
+- **Multi-factor authentication:** Implement 2FA where appropriate
+- **Session management:** Use secure session tokens
+- **Password policies:** Enforce strong password requirements
 
-## 7. When All Else Fails, Remix
+**Authorization:**
+- **Role-based access control:** Implement proper user roles
+- **Resource-level permissions:** Control access to specific data
+- **Input validation:** Validate all user inputs
+- **SQL injection prevention:** Use parameterized queries
 
-Many users realize: doing it all over takes less time the second time.
+### **Data Protection**
+Protect sensitive user data:
 
-- [Remix](https://docs.kadabra.dev/user-guides/quickstart#remix-an-existing-project:~:text=you%20to%20reuse-,the,-current%20state%20of) creates a clean copy of your project at T=0.
-- Rebuild with better prompting \+ clearer knowledge
-- Use your old project as reference only
+**Data Security:**
+- **Encryption:** Encrypt sensitive data in transit and at rest
+- **Environment variables:** Store secrets in environment variables
+- **HTTPS enforcement:** Always use secure connections
+- **Data minimization:** Only collect necessary user data
 
-**Use cases:**
+**Privacy Compliance:**
+- **GDPR compliance:** Implement proper data handling practices
+- **User consent:** Get explicit consent for data collection
+- **Data portability:** Allow users to export their data
+- **Right to deletion:** Implement data deletion capabilities
 
-- You're stuck in a buggy loop
-- You want to restart clean with preserved history
-- You need to disconnect Superbase and try a new path
+## Testing Strategies
 
-<Tip>
-  Remixing requires disconnecting Superbase first.
-</Tip>
+### **Testing Pyramid**
+Implement a comprehensive testing strategy:
 
-## 8. Stay Patient, Stay Calm
+**Unit Tests:**
+- **Component testing:** Test individual components in isolation
+- **Function testing:** Test utility functions and business logic
+- **Mock dependencies:** Mock external dependencies for reliable tests
+- **High coverage:** Aim for high test coverage of critical code
 
-You’re not alone. AI can be magical one moment and frustrating the next. The final 5% of any build is often the slowest—but the most important.
+**Integration Tests:**
+- **API testing:** Test API endpoints and data flow
+- **Component integration:** Test how components work together
+- **Database testing:** Test database operations and data integrity
+- **User workflows:** Test complete user journeys
 
-<Tip>
-  **Golden rule:**
+**End-to-End Tests:**
+- **Critical paths:** Test main user workflows
+- **Cross-browser testing:** Ensure compatibility across browsers
+- **Mobile testing:** Test responsive design and mobile interactions
+- **Performance testing:** Validate performance under load
 
-  Take your time with prompts. Re-check everything. Break work into small, testable blocks. The more precise your inputs, the better your outputs.
-</Tip>
+### **Testing Best Practices**
+Follow proven testing methodologies:
 
-## 9. Use the Docs & Ask for Help
+**Test Design:**
+- **Arrange-Act-Assert:** Structure tests with clear sections
+- **Descriptive names:** Use test names that explain the scenario
+- **Isolated tests:** Each test should be independent
+- **Fast execution:** Keep tests fast for quick feedback
 
-- [Documentation](https://docs.kadabra.dev) contains walkthroughs, templates, SEO tips, integrations, and more. You can ask questions directly in the doc AI assistant.
-- Join the [Discord community](https://discord.gg/kadabra-dev) for peer support.
-- When ready, submit your project to [Kadabra Launch](https://docs.kadabra.dev/features/launched).
+**Test Maintenance:**
+- **Update tests with code:** Keep tests current with code changes
+- **Refactor test code:** Maintain clean, readable test code
+- **Remove obsolete tests:** Delete tests that no longer apply
+- **Document test setup:** Explain how to run and maintain tests
 
-## 10. Bonus Tips
+## Deployment & DevOps
 
-- Add a voice note prompt using dictation (e.g. On Mac, use the mic to dictate long prompts) for long prompts. You’ll craft better input faster—especially useful when frustrated or tired.
-- Use the “`I am frustrated…`” prompt pattern to nudge better AI focus
-- After a major edit, always recheck multiple roles and their behavior (especially with conditional logic)
-- Store stable versions as fallbacks for quick debugging
-- If you're seeing unexpected side effects, this helps avoid bugs caused by overly generic logic.
+### **Environment Management**
+Manage different deployment environments:
 
-  ```
-  Create a component specifically for [role X] and do not reuse shared components unless clearly scoped.
-  ```
+**Environment Configuration:**
+- **Development:** Local development environment
+- **Staging:** Pre-production testing environment
+- **Production:** Live user environment
+- **Environment variables:** Use environment-specific configuration
+
+**Deployment Pipeline:**
+- **Automated testing:** Run tests before deployment
+- **Code quality checks:** Validate code quality and standards
+- **Security scanning:** Check for security vulnerabilities
+- **Rollback capability:** Ability to quickly revert deployments
+
+### **Monitoring & Observability**
+Track application health and performance:
+
+**Application Monitoring:**
+- **Error tracking:** Monitor and alert on application errors
+- **Performance metrics:** Track response times and throughput
+- **User experience:** Monitor Core Web Vitals and user interactions
+- **Business metrics:** Track key business indicators
+
+**Infrastructure Monitoring:**
+- **Server health:** Monitor server resources and availability
+- **Database performance:** Track database query performance
+- **External services:** Monitor third-party service health
+- **Alerting:** Set up alerts for critical issues
+
+## Code Review Process
+
+### **Review Guidelines**
+Establish effective code review practices:
+
+**What to Review:**
+- **Functionality:** Does the code work as intended?
+- **Code quality:** Is the code clean and maintainable?
+- **Security:** Are there security vulnerabilities?
+- **Performance:** Are there performance issues?
+- **Testing:** Are there adequate tests?
+
+**Review Process:**
+- **Small changes:** Keep changes small and focused
+- **Clear feedback:** Provide specific, actionable feedback
+- **Constructive criticism:** Focus on improvement, not criticism
+- **Timely reviews:** Complete reviews quickly to maintain momentum
+
+### **Review Checklist**
+Use a systematic approach to code reviews:
+
+- [ ] **Functionality:** Does the code implement the required feature?
+- [ ] **Code quality:** Is the code clean, readable, and maintainable?
+- [ ] **Error handling:** Are errors handled appropriately?
+- [ ] **Security:** Are there any security vulnerabilities?
+- [ ] **Performance:** Are there performance optimizations needed?
+- [ ] **Testing:** Are there adequate tests for the changes?
+- [ ] **Documentation:** Is the code properly documented?
+- [ ] **Standards:** Does the code follow project standards?
+
+## Continuous Improvement
+
+### **Learning & Growth**
+Continuously improve your development skills:
+
+**Skill Development:**
+- **Stay current:** Keep up with new technologies and practices
+- **Learn from mistakes:** Analyze and learn from failures
+- **Code reviews:** Participate in code reviews to learn from others
+- **Pair programming:** Collaborate with other developers
+
+**Process Improvement:**
+- **Retrospectives:** Regularly review and improve development processes
+- **Feedback loops:** Gather feedback from users and stakeholders
+- **Metrics tracking:** Measure and track improvement over time
+- **Best practice sharing:** Share knowledge with your team
+
+### **Community Engagement**
+Contribute to the broader development community:
+
+**Open Source:**
+- **Contribute to projects:** Help improve open source tools
+- **Share knowledge:** Write blog posts and create tutorials
+- **Mentor others:** Help junior developers grow
+- **Attend conferences:** Learn from and network with other developers
+
+**Knowledge Sharing:**
+- **Document your work:** Create clear documentation for your projects
+- **Share lessons learned:** Write about your experiences and insights
+- **Present at meetups:** Share your knowledge with local communities
+- **Answer questions:** Help others in online communities
+
+## Getting Started with Best Practices
+
+<Steps>
+  <Step title="Assess Current State">
+    Evaluate your current development practices and identify areas for improvement
+  </Step>
+  <Step title="Set Goals">
+    Define specific goals for improving your development practices
+  </Step>
+  <Step title="Implement Changes">
+    Start implementing best practices in your current projects
+  </Step>
+  <Step title="Measure Progress">
+    Track improvements and adjust your approach based on results
+  </Step>
+  <Step title="Iterate and Improve">
+    Continuously refine your practices based on experience and feedback
+  </Step>
+</Steps>
+
+## Need Help Implementing Best Practices?
+
+<CardGroup cols="2">
+  <Card title="Community Support" icon="discord" href="/tips-tricks/community">
+    Connect with other developers and get help with best practices
+  </Card>
+  <Card title="Troubleshooting" icon="wrench" href="/tips-tricks/troubleshooting">
+    Get help solving development problems and issues
+  </Card>
+</CardGroup>
+
+<Note>
+  **Remember:** Best practices are guidelines, not rigid rules. Adapt them to your specific context and needs. The goal is to improve code quality, maintainability, and user experience - not to follow practices blindly. Start with the fundamentals and gradually incorporate more advanced practices as you gain experience.
+</Note>

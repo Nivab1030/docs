@@ -1,0 +1,256 @@
+---
+title: "Prompting 101"
+description: "Master the art of writing effective prompts to get the best results from Kadabra"
+icon: "lightbulb"
+---
+
+<CardGroup cols="2">
+  <Card title="Effective Communication" icon="comments">
+    Learn how to communicate clearly with the AI to get exactly what you want
+  </Card>
+  <Card title="Best Practices" icon="star">
+    Proven techniques and strategies for successful prompt engineering
+  </Card>
+</CardGroup>
+
+Prompt engineering is the art of crafting clear, specific instructions that help the Kadabra AI understand exactly what you want to build. Think of it as learning to speak the AI's language - the better you communicate, the better your results will be.
+
+## What is Prompt Engineering?
+
+Prompt engineering is the process of designing and refining the text inputs (prompts) that you send to the AI to achieve your desired outcomes. It's about:
+- **Clear Communication:** Expressing your ideas in a way the AI can understand
+- **Specific Instructions:** Providing enough detail to get precise results
+- **Iterative Refinement:** Improving your prompts based on the AI's responses
+- **Context Management:** Giving the AI the right information at the right time
+
+## The Fundamentals of Good Prompts
+
+### **Clarity is Key**
+- **Be Specific:** Instead of "make it look good," say "use a modern, minimalist design with plenty of white space"
+- **Use Examples:** Reference similar applications or features you like
+- **Define Goals:** Explain what you want to achieve, not just what you want to build
+- **Avoid Ambiguity:** Use precise language that leaves no room for interpretation
+
+### **Structure Your Prompts**
+<Note>
+  **Pro Tip:** Think of your prompt as a recipe - list the ingredients (requirements) and steps (instructions) clearly.
+</Note>
+
+**Basic Prompt Structure:**
+1. **Context:** What you're building and why
+2. **Requirements:** Specific features and functionality needed
+3. **Constraints:** Technical limitations or preferences
+4. **Examples:** References or inspiration
+5. **Expected Outcome:** What success looks like
+
+## Prompt Types and When to Use Them
+
+### **Build Prompts**
+Use when creating new features or applications:
+
+```
+"I want to build a task management app for a small team. 
+It should include:
+- User authentication with email/password
+- Create, edit, and delete tasks
+- Assign tasks to team members
+- Due date tracking
+- Simple, clean interface similar to Todoist
+Please use React with Tailwind CSS and Supabase for the backend."
+```
+
+### **Edit Prompts**
+Use when modifying existing code:
+
+```
+"Update the login form to include:
+- Remember me checkbox
+- Forgot password link
+- Social login buttons (Google, GitHub)
+- Better error handling with user-friendly messages
+Keep the existing styling but make it more polished."
+```
+
+### **Debug Prompts**
+Use when troubleshooting issues:
+
+```
+"My app is showing a blank page after login. 
+The console shows this error: [paste error here]
+Can you help me identify and fix the issue?"
+```
+
+### **Optimization Prompts**
+Use when improving performance or user experience:
+
+```
+"Make the dashboard load faster by:
+- Implementing lazy loading for charts
+- Adding loading states
+- Optimizing database queries
+- Reducing bundle size
+Please explain what changes you're making."
+```
+
+## Advanced Prompting Techniques
+
+### **Chain of Thought Prompting**
+Break down complex requests into logical steps:
+
+```
+"Let's build this feature step by step:
+1. First, create the database schema for user profiles
+2. Then, build the profile editing form
+3. Finally, implement the profile display component
+Start with step 1 and explain your approach."
+```
+
+### **Few-Shot Learning**
+Provide examples of what you want:
+
+```
+"Create a button component that follows this pattern:
+- Primary buttons: blue background, white text, rounded corners
+- Secondary buttons: white background, blue border, blue text
+- Danger buttons: red background, white text
+Use the same styling approach for all button variants."
+```
+
+### **Iterative Refinement**
+Build complexity gradually:
+
+```
+"Start with a basic user registration form. 
+Once that's working, add:
+- Email verification
+- Password strength requirements
+- Terms of service checkbox
+- Social login options
+Let's do this one step at a time."
+```
+
+## Common Prompting Mistakes to Avoid
+
+### **Vague Instructions**
+❌ **Don't:** "Make it better"
+✅ **Do:** "Improve the user experience by adding loading states, better error messages, and smoother animations"
+
+### **Too Many Requirements at Once**
+❌ **Don't:** List 20 features in one prompt
+✅ **Do:** Break down into smaller, focused prompts
+
+### **Missing Context**
+❌ **Don't:** "Add a search feature"
+✅ **Do:** "Add a search feature to the product catalog that filters by category, price, and rating"
+
+### **Ignoring Technical Constraints**
+❌ **Don't:** "Build a complex real-time chat system"
+✅ **Do:** "Build a real-time chat system using Supabase real-time subscriptions, keeping it simple for now"
+
+## Prompt Engineering Best Practices
+
+### **Start Simple, Build Up**
+- **Begin with basic functionality** and add complexity gradually
+- **Test each feature** before moving to the next
+- **Iterate based on results** and user feedback
+- **Document what works** for future reference
+
+### **Use Clear, Actionable Language**
+- **Use action verbs:** "Create," "Update," "Implement," "Optimize"
+- **Be specific about requirements:** "Use Tailwind CSS for styling"
+- **Define success criteria:** "The form should validate email format and show clear error messages"
+- **Specify technical preferences:** "Use React hooks for state management"
+
+### **Provide Context and Examples**
+- **Explain the purpose:** "This is for a small business website"
+- **Reference similar apps:** "Like the interface of Notion or Figma"
+- **Share design preferences:** "I prefer dark mode with accent colors"
+- **Include technical context:** "This needs to work on mobile devices"
+
+## Working with the AI's Responses
+
+### **Review and Validate**
+- **Check the generated code** for functionality and quality
+- **Test the features** to ensure they work as expected
+- **Look for edge cases** and potential issues
+- **Verify the implementation** matches your requirements
+
+### **Iterate and Improve**
+- **Ask for modifications** if something isn't quite right
+- **Request explanations** for complex code sections
+- **Ask for alternatives** if you want to explore different approaches
+- **Request optimizations** once the basic functionality works
+
+### **Learn from the Process**
+- **Note what worked well** in your prompts
+- **Identify areas for improvement** in your communication
+- **Build a prompt library** of successful patterns
+- **Share effective prompts** with the community
+
+## Prompt Templates
+
+### **Feature Development Template**
+```
+I want to build [FEATURE] for [PURPOSE].
+Requirements:
+- [REQUIREMENT 1]
+- [REQUIREMENT 2]
+- [REQUIREMENT 3]
+Technical preferences: [FRAMEWORKS/LIBRARIES]
+Design style: [DESCRIPTION OR REFERENCE]
+Please start with [STARTING POINT] and explain your approach.
+```
+
+### **Bug Fix Template**
+```
+I'm experiencing [PROBLEM DESCRIPTION].
+Error message: [ERROR DETAILS]
+Expected behavior: [WHAT SHOULD HAPPEN]
+Current behavior: [WHAT'S ACTUALLY HAPPENING]
+Relevant code: [PASTE CODE IF NEEDED]
+Can you help me identify and fix this issue?
+```
+
+### **Optimization Template**
+```
+I want to improve [ASPECT] of my app.
+Current performance: [CURRENT METRICS]
+Goals: [WHAT YOU WANT TO ACHIEVE]
+Constraints: [TECHNICAL LIMITATIONS]
+Please suggest specific optimizations and implement them.
+```
+
+## Practice and Improvement
+
+### **Start with Simple Projects**
+- **Build basic applications** to practice your prompting skills
+- **Experiment with different approaches** to see what works best
+- **Keep a prompt journal** to track your learning progress
+- **Review and refine** your prompts based on results
+
+### **Learn from the Community**
+- **Join the Kadabra Discord** to share prompts and learn from others
+- **Study successful projects** to understand effective prompting patterns
+- **Participate in community challenges** to test your skills
+- **Share your knowledge** with other users
+
+### **Continuous Learning**
+- **Stay updated** with new prompting techniques
+- **Experiment with advanced features** as you become more comfortable
+- **Adapt your style** based on the AI's responses
+- **Build your expertise** in specific domains or use cases
+
+## Need Help with Prompting?
+
+<CardGroup cols="2">
+  <Card title="Example Prompts" icon="copy" href="/prompting/example-prompts">
+    Browse a collection of effective prompts for common use cases
+  </Card>
+  <Card title="Debugging Guide" icon="bug" href="/prompting/debug">
+    Learn how to troubleshoot and fix issues with your prompts
+  </Card>
+</CardGroup>
+
+<Note>
+  **Remember:** Prompt engineering is a skill that improves with practice. Start simple, be specific, and don't be afraid to iterate. The better you communicate with the AI, the more powerful your development capabilities become.
+</Note> 

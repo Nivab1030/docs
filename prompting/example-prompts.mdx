@@ -1,0 +1,481 @@
+---
+title: "Example Prompts"
+description: "A collection of effective prompts for common development tasks and use cases"
+icon: "copy"
+---
+
+<CardGroup cols="2">
+  <Card title="Ready-to-Use Templates" icon="template">
+    Copy and customize these prompts for your projects
+  </Card>
+  <Card title="Learn by Example" icon="graduation-cap">
+    Study these prompts to improve your own prompt engineering skills
+  </Card>
+</CardGroup>
+
+This collection of example prompts demonstrates effective prompt engineering techniques for common development tasks. Use these as templates, customize them for your specific needs, and learn from the patterns to create your own effective prompts.
+
+## Authentication & User Management
+
+### **User Registration System**
+```
+I want to build a user registration system for my SaaS application.
+
+Requirements:
+- Email and password registration
+- Email verification with confirmation link
+- Password strength requirements (minimum 8 characters, uppercase, lowercase, number)
+- Terms of service and privacy policy checkboxes
+- Welcome email after successful verification
+- Redirect to dashboard after login
+
+Technical preferences: React with TypeScript, Tailwind CSS, Supabase for backend
+Design: Clean, professional interface similar to Stripe's signup form
+
+Please implement this step by step, starting with the registration form component.
+```
+
+### **Social Login Integration**
+```
+Add social login options to my existing authentication system.
+
+Current setup: Email/password authentication with Supabase
+New requirements:
+- Google OAuth integration
+- GitHub OAuth integration
+- Maintain existing email/password option
+- Single sign-on experience
+- User profile creation from social data
+
+Please show me how to configure the OAuth providers and update the UI to include social login buttons.
+```
+
+### **Password Reset Flow**
+```
+Implement a complete password reset flow for my app.
+
+Requirements:
+- "Forgot Password" link on login page
+- Email input form for password reset request
+- Secure reset token generation and validation
+- New password input form with strength validation
+- Success confirmation and automatic login
+- Expire reset tokens after 1 hour
+
+Use the existing Supabase setup and maintain the current design system.
+```
+
+## UI Components & Design
+
+### **Responsive Navigation Bar**
+```
+Create a responsive navigation bar for my business website.
+
+Requirements:
+- Company logo on the left
+- Navigation menu items: Home, About, Services, Contact
+- Mobile hamburger menu with smooth animations
+- Sticky positioning with shadow on scroll
+- Call-to-action button on the right
+- Smooth transitions and hover effects
+
+Design style: Modern, professional, similar to Apple's website navigation
+Use Tailwind CSS and make it fully responsive.
+```
+
+### **Data Table Component**
+```
+Build a reusable data table component for displaying user information.
+
+Features needed:
+- Sortable columns (name, email, role, status)
+- Search/filter functionality
+- Pagination with configurable page sizes
+- Row selection with checkboxes
+- Bulk actions (delete, export, change status)
+- Responsive design for mobile devices
+
+Data structure: Array of user objects with id, name, email, role, status, createdAt
+Use React with TypeScript and implement proper accessibility features.
+```
+
+### **Modal System**
+```
+Create a flexible modal system for my React application.
+
+Requirements:
+- Reusable modal component with backdrop
+- Support for different sizes (small, medium, large)
+- Close on backdrop click and escape key
+- Focus management and accessibility
+- Animation on open/close
+- Support for custom content and forms
+
+Please include examples of how to use it for confirmation dialogs, forms, and content display.
+```
+
+## Data Management & Forms
+
+### **CRUD Operations Interface**
+```
+Build a complete CRUD interface for managing blog posts.
+
+Features:
+- List view with search and pagination
+- Create new post form with rich text editor
+- Edit existing posts inline
+- Delete confirmation with undo option
+- Image upload and management
+- Category and tag management
+
+Technical stack: React, Supabase, Tailwind CSS
+Include proper form validation and error handling.
+```
+
+### **Advanced Search & Filtering**
+```
+Implement advanced search and filtering for my product catalog.
+
+Search capabilities:
+- Full-text search across product names and descriptions
+- Filter by category, price range, brand, and rating
+- Sort by relevance, price, date, and popularity
+- Faceted search with checkboxes
+- Search suggestions and autocomplete
+- URL state management for shareable links
+
+Use React Query for data fetching and implement debounced search input.
+```
+
+### **File Upload System**
+```
+Create a file upload system for my document management app.
+
+Requirements:
+- Drag and drop file upload
+- Multiple file selection
+- File type validation (PDF, DOC, images)
+- File size limits (max 10MB per file)
+- Upload progress indicators
+- File preview for images and PDFs
+- Delete and replace functionality
+
+Backend: Supabase storage
+Frontend: React with drag-and-drop library
+Include proper error handling and user feedback.
+```
+
+## Dashboard & Analytics
+
+### **Admin Dashboard**
+```
+Build an admin dashboard for my e-commerce platform.
+
+Key metrics to display:
+- Total revenue and orders
+- User growth and engagement
+- Top-selling products
+- Recent orders with status
+- Customer support tickets
+- Inventory alerts
+
+Layout: Grid-based with cards for each metric
+Charts: Use Chart.js or Recharts for data visualization
+Make it responsive and include real-time updates.
+```
+
+### **User Profile Dashboard**
+```
+Create a user profile dashboard for my SaaS application.
+
+Sections needed:
+- Personal information editing
+- Subscription details and billing
+- Usage statistics and limits
+- API keys management
+- Notification preferences
+- Account security settings
+
+Design: Clean, organized layout with clear sections
+Include form validation and success/error feedback.
+```
+
+### **Analytics Dashboard**
+```
+Implement an analytics dashboard for tracking website performance.
+
+Metrics to track:
+- Page views and unique visitors
+- Traffic sources and referrers
+- User behavior (time on page, bounce rate)
+- Conversion funnel analysis
+- Geographic data visualization
+- Device and browser statistics
+
+Use a charting library and implement date range selectors.
+Include export functionality for reports.
+```
+
+## E-commerce Features
+
+### **Shopping Cart System**
+```
+Build a shopping cart system for my online store.
+
+Features:
+- Add/remove items with quantity controls
+- Persistent cart across sessions
+- Price calculations with tax and shipping
+- Coupon code application
+- Save for later functionality
+- Cart summary with checkout button
+
+State management: React Context or Redux
+Include proper error handling and loading states.
+```
+
+### **Product Catalog**
+```
+Create a product catalog with advanced filtering.
+
+Requirements:
+- Grid/list view toggle
+- Product cards with images, titles, prices
+- Category and subcategory navigation
+- Price range slider
+- Brand and attribute filters
+- Sort options (price, popularity, date)
+- Quick view modal for product details
+
+Use React Query for data fetching and implement infinite scroll or pagination.
+```
+
+### **Checkout Process**
+```
+Implement a complete checkout flow for my e-commerce site.
+
+Steps:
+- Cart review and editing
+- Shipping address input with validation
+- Shipping method selection
+- Payment method selection (credit card, PayPal)
+- Order summary and confirmation
+- Order confirmation email
+
+Integrate with Stripe for payments and include proper error handling.
+Make the process mobile-friendly with progress indicators.
+```
+
+## Real-time Features
+
+### **Live Chat System**
+```
+Build a real-time chat system for customer support.
+
+Features:
+- Real-time messaging with typing indicators
+- File and image sharing
+- Chat history and search
+- User status (online/offline)
+- Unread message notifications
+- Chat rooms and private messages
+
+Backend: Supabase real-time subscriptions
+Frontend: React with proper state management
+Include proper error handling and reconnection logic.
+```
+
+### **Collaborative Editor**
+```
+Create a collaborative text editor for team documents.
+
+Requirements:
+- Real-time collaborative editing
+- User cursors and selections
+- Change tracking and history
+- Comments and suggestions
+- Export to different formats
+- Version control and rollback
+
+Use operational transformation or conflict-free replicated data types.
+Include proper conflict resolution and user presence indicators.
+```
+
+### **Live Notifications**
+```
+Implement a real-time notification system for my app.
+
+Features:
+- Push notifications for new messages
+- In-app notification center
+- Mark as read functionality
+- Notification preferences
+- Sound and visual alerts
+- Notification history
+
+Use service workers for push notifications and WebSockets for real-time updates.
+Include proper permission handling and user preferences.
+```
+
+## Performance & Optimization
+
+### **Lazy Loading Implementation**
+```
+Optimize my React app with lazy loading and code splitting.
+
+Areas to optimize:
+- Route-based code splitting
+- Component lazy loading
+- Image lazy loading with placeholders
+- Data fetching optimization
+- Bundle size reduction
+- Performance monitoring
+
+Use React.lazy, Suspense, and implement proper loading states.
+Include performance metrics and monitoring.
+```
+
+### **Caching Strategy**
+```
+Implement a comprehensive caching strategy for my application.
+
+Caching layers:
+- Browser caching for static assets
+- Service worker for offline functionality
+- React Query for API response caching
+- Local storage for user preferences
+- Memory caching for frequently accessed data
+
+Include cache invalidation strategies and offline fallbacks.
+```
+
+### **Performance Monitoring**
+```
+Add performance monitoring to my web application.
+
+Track metrics:
+- Core Web Vitals (LCP, FID, CLS)
+- Page load times and resource loading
+- User interaction metrics
+- Error rates and performance issues
+- Real user monitoring (RUM)
+
+Use Web Vitals API and implement custom performance tracking.
+Include alerting for performance degradation.
+```
+
+## Mobile & Responsive Design
+
+### **Mobile-First Design**
+```
+Redesign my website with a mobile-first approach.
+
+Requirements:
+- Mobile-optimized navigation
+- Touch-friendly interface elements
+- Responsive images and media
+- Mobile-specific interactions
+- Progressive Web App features
+- Offline functionality
+
+Start with mobile design and progressively enhance for larger screens.
+Include proper touch targets and mobile UX best practices.
+```
+
+### **Progressive Web App**
+```
+Convert my website to a Progressive Web App (PWA).
+
+Features:
+- Service worker for offline functionality
+- App manifest for installation
+- Push notifications
+- Background sync
+- App-like navigation
+- Offline-first design
+
+Include proper PWA testing and validation tools.
+Ensure compliance with PWA standards and best practices.
+```
+
+## API & Integration
+
+### **REST API Client**
+```
+Build a comprehensive API client for my application.
+
+Features:
+- HTTP request/response handling
+- Authentication and authorization
+- Request/response interceptors
+- Error handling and retry logic
+- Request caching and deduplication
+- TypeScript support with API types
+
+Use Axios or fetch with proper error handling and loading states.
+Include examples of common API operations.
+```
+
+### **Webhook Integration**
+```
+Implement webhook handling for third-party integrations.
+
+Requirements:
+- Webhook endpoint creation
+- Signature verification
+- Event processing and routing
+- Retry logic for failed deliveries
+- Webhook management dashboard
+- Logging and monitoring
+
+Include security best practices and proper error handling.
+Implement webhook testing and validation tools.
+```
+
+## Testing & Quality Assurance
+
+### **Component Testing Suite**
+```
+Set up a comprehensive testing suite for my React components.
+
+Testing tools:
+- Jest for unit testing
+- React Testing Library for component testing
+- Cypress for end-to-end testing
+- Storybook for component development
+- Code coverage reporting
+- Automated testing pipeline
+
+Include example tests for common components and testing best practices.
+```
+
+### **Accessibility Implementation**
+```
+Make my application fully accessible and WCAG compliant.
+
+Requirements:
+- Proper semantic HTML structure
+- ARIA labels and roles
+- Keyboard navigation support
+- Screen reader compatibility
+- Color contrast compliance
+- Focus management
+
+Include accessibility testing tools and compliance validation.
+Provide examples of accessible component implementations.
+```
+
+## Need More Examples?
+
+<CardGroup cols="2">
+  <Card title="Prompting 101" icon="lightbulb" href="/prompting/prompting-101">
+    Learn the fundamentals of effective prompt engineering
+  </Card>
+  <Card title="Debugging Guide" icon="bug" href="/prompting/debug">
+    Learn how to troubleshoot and fix issues with your prompts
+  </Card>
+</CardGroup>
+
+<Note>
+  **Pro Tip:** Use these examples as starting points, but always customize them for your specific project requirements, technical stack, and design preferences. The more specific and contextual your prompts are, the better results you'll get.
+</Note> 
