@@ -1,53 +1,171 @@
 ---
-title: "Welcome"
-description: "Learn about Kadabra and how to get started"
+title: "Welcome to Kadabra"
+description: "Build and run AI-powered automations that ship real work - safely, visibly, and without code"
 icon: "door-open"
 ---
 
-<iframe
-  className="w-full aspect-video rounded-xl"
-  src="https://www.youtube.com/embed/xDwR1_vrIg8"
-  title="YouTube video player"
-  frameBorder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+# Kadabra
 
-Kadabra is an AI-powered platform that enables users of any skill level to create full-stack websites through natural language. 
-Simply describe what you want, and Kadabra builds it for you.
+Count tasks. Ship flows. What ships is what pays.
 
-<CardGroup cols="3">
+Kadabra helps non-technical teams turn everyday tasks into reliable automations. You describe the outcome in plain language, Kadabra drafts a flow, and you refine it on a visual canvas with guardrails, approvals, and observability baked in.
+
+- **Built for non-technical users** - prompts and a visual canvas instead of code
+- **Agent where it helps, deterministic where it matters** - the right level of autonomy per step
+- **Governance first** - versioning, dry runs, kill switches, budgets, and audit trails
+- **Measurable outcomes** - track tasks automated and impact created or saved
+
+---
+
+## Who Kadabra is for
+
+- **Marketing, Sales, CS, Ops, Product** - ship automations without waiting in a backlog
+- **Automation teams and BizApps** - offer a governed platform with scoped access and change control
+- **Founders and small teams** - get leverage early without writing glue code
+
+---
+
+## Core concepts
+
+- **Flow** - a chain of steps that transforms inputs to an outcome. Steps can be agentic (LLM powered) or deterministic (clear rules and APIs).
+- **Node** - a single step in a flow. Examples: Fetch from CRM, Generate summary, Classify intent, Post to Slack, Upsert record.
+- **Trigger** - how a flow starts. Examples: webhook, schedule, inbox, form, app event.
+- **Run** - an execution of a flow with full input and output snapshots, logs, and metrics.
+- **Policy** - guardrails like approvals, spend caps, dry run mode, or data handling rules.
+- **Env** - dev, stage, and prod with isolated secrets and credentials.
+
+---
+
+## What makes Kadabra different
+
+- **Start with the task** - measure success by tasks automated, not agents deployed
+- **Draft to ship** - prompt to generate a first draft, then refine on the canvas until shippable
+- **Observability always on** - step replay, snapshots, and traceability by default
+- **Safety by design** - approvals, rollbacks, idempotency, and kill switches are native features
+- **Hybrid execution** - combine LLM intelligence with deterministic API steps and human-in-the-loop
+
+---
+
+## Typical use cases
+
+- Triage and route inbound requests with structured summaries and next actions
+- Sync, enrich, and clean CRM or support data across tools
+- Generate briefs, posts, and follow-ups from raw inputs with approvals before publish
+- Monitor changes across systems and trigger downstream workflows
+- Build internal assistants that complete tasks instead of chatting about them
+
+---
+
+## How it works at a glance
+
+<Steps>
+  <Step title="Describe the outcome">
+    Write a short prompt like: "When a new lead arrives with company size over 50, enrich from LinkedIn, score by fit, post a summary to Sales Slack, and create an opportunity if score is high."
+  </Step>
+  <Step title="Kadabra drafts a flow">
+    You get a first version on the visual canvas with triggers, nodes, and data mapping.
+  </Step>
+  <Step title="Refine and add guardrails">
+    Adjust fields, add approvals, set budgets, enable dry runs, and define fallback paths.
+  </Step>
+  <Step title="Publish">
+    Promote from dev to stage to prod. Expose as a webhook, schedule it, or connect to your tools.
+  </Step>
+  <Step title="Monitor and improve">
+    Inspect runs, replay failing steps, compare versions, and track tasks automated and impact.
+  </Step>
+</Steps>
+
+---
+
+## Architecture overview
+
+<CardGroup cols="2">
+  <Card title="Kadabra Agent" icon="robot">
+    Converts task descriptions into draft flows, suggests nodes and data mapping, and proposes tests. You decide what ships.
+  </Card>
+  <Card title="Visual Canvas" icon="palette">
+    Edit steps, branches, prompts, and mappings with live validation.
+  </Card>
+  <Card title="Runtime" icon="play">
+    Executes flows with retry, backoff, and idempotency. Supports long running steps via queues and callbacks.
+  </Card>
+  <Card title="Observability" icon="chart-line">
+    Per-run traces, input and output snapshots, metrics, and alerts.
+  </Card>
+  <Card title="Governance" icon="shield-halved">
+    Versioning, approvals, role based access, environment isolation, audit logs.
+  </Card>
+  <Card title="Security" icon="lock">
+    Encrypted secrets vault, SSO options, scoped credentials, PII controls.
+  </Card>
+</CardGroup>
+
+---
+
+## Data and permissions
+
+- **Secrets** - stored encrypted with fine-grained scopes per environment and per flow.
+- **Credentials** - OAuth and API keys are isolated and never shared across envs by default.
+- **Access** - workspace roles for creators, reviewers, and viewers. Flow level permissions for edit, publish, and run.
+- **PII** - redaction options for logs and traces. Mark fields as sensitive to prevent exposure.
+
+---
+
+## What you can integrate
+
+Kadabra supports HTTP APIs and common SaaS apps. Use native nodes when available or connect any REST API with the API node. You can enrich, transform, and sync data between systems used by GTM, Ops, and Product teams.
+
+See **Integrations - Introduction** to learn how integrations are added and governed.
+
+---
+
+## Success metrics
+
+Kadabra tracks the metrics that matter:
+
+- **Tasks automated** - the count of tasks reliably shipped by flows
+- **Impact** - time saved and value created estimates per flow
+- **Reliability** - success rate, mean time to repair, error classes
+- **Cost** - LLM token costs and third party API spend with caps and approvals
+
+---
+
+## Quick tour
+
+<CardGroup cols="2">
+  <Card title="Meet the Kadabra Agent" icon="robot" href="/features/kadabra-agent">
+    Generate a flow draft from a plain language description
+  </Card>
+  <Card title="Refine on the Visual Canvas" icon="palette" href="/features/visual-canvas">
+    Add branches, validations, and fallbacks
+  </Card>
+  <Card title="Publish with confidence" icon="rocket" href="/features/publish">
+    Dev to stage to prod with approvals and rollbacks
+  </Card>
+  <Card title="Observe and improve" icon="chart-line" href="/features/monitoring">
+    Traces, snapshots, and alerts
+  </Card>
+  <Card title="Lock it down" icon="shield-halved" href="/features/security">
+    Roles, scopes, secrets, and audit logs
+  </Card>
+</CardGroup>
+
+---
+
+## Next steps
+
+<CardGroup cols="2">
   <Card title="Getting Started" icon="stairs" href="/introduction/getting-started">
-    Step-by-step tutorial to create your first project.
+    Create your first flow
   </Card>
-  <Card title="Features" icon="toolbox" href="/features">
-    Kadabra's core features and capabilities.
+  <Card title="Best Practices" icon="star" href="/tips-tricks/best-practice">
+    Design for reliability and cost
   </Card>
-  <Card title="Integrations" icon="link" href="/integrations">
-    Extend functionality with integrations.
+  <Card title="Prompting 101" icon="lightbulb" href="/prompting/prompting-101">
+    Write prompts that ship work
   </Card>
-  <Card title="Tips & Tricks" icon="lightbulb" href="/tips-tricks">
-    Get the most out of Kadabra.
-  </Card>
-  <Card title="Prompt Engineering" icon="robot" href="/prompting">
-    Learn effective prompting strategies.
-  </Card>
-  <Card title="Glossary" icon="bookmark" href="/glossary">
-    Learn the key terms.
-  </Card>
-  <Card title="Templates" icon="copy" href="https://kadabra.dev/templates">
-    Browse and use project templates.
-  </Card>
-  <Card title="Launched" icon="rocket" href="https://launched.kadabra.app/">
-    Compete for free credits every week!
-  </Card>
-  <Card title="Affiliate program" icon="earth-americas" href="https://kadabra.dev/affiliates">
-    Refer users and receive a commission.
-  </Card>
-  <Card title="Partner program" icon="handshake" href="https://kadabra.dev/partners">
-    Hire one of our partners to get help. 
-  </Card>
-  <Card title="Community" icon="discord" href="https://discord.gg/kadabra-dev">
-    Join our Kadabra community on Discord.
+  <Card title="Community" icon="discord" href="/tips-tricks/community">
+    Learn from others and share feedback
   </Card>
 </CardGroup>
